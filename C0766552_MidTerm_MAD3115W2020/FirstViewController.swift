@@ -8,10 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FirstViewController: UIViewController {
 
+    @IBOutlet weak var imgIcon: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imgIcon.image = UIImage(named: "Bill-512")
         // Do any additional setup after loading the view.
     }
 
