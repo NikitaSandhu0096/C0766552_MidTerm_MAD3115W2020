@@ -52,7 +52,7 @@
             <objects>
                 <viewController storyboardIdentifier="secondVC" id="dqs-wN-Dnm" customClass="SecondViewController" customModule="C0766552_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bN0-22-jXE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAM-ZX-g8B">
@@ -90,6 +90,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="swhRemember" destination="mvL-Wm-aaU" id="J94-BB-8H0"/>
                         <outlet property="txtEmail" destination="IAM-ZX-g8B" id="vaY-MW-Gx8"/>
                         <outlet property="txtPassword" destination="vqP-Em-zAp" id="2V7-cg-R1p"/>
                         <segue destination="znd-C2-MWN" kind="show" identifier="showNC2" id="LNo-3v-Zqm"/>
@@ -104,14 +105,18 @@
             <objects>
                 <viewController storyboardIdentifier="thirdVC" id="yy8-qt-g47" customClass="ThirdViewController" customModule="C0766552_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fNz-zd-RcZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="lhY-f2-uEz"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Customers" id="91o-gP-agO">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="kbm-Qe-ol6"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="kbm-Qe-ol6">
+                            <connections>
+                                <segue destination="8Gt-iZ-WDr" kind="show" id="hl4-8t-XVO"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="New Customer" id="DPj-aC-LBE"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -127,7 +132,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="W4f-jf-Djd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PKy-1i-mCa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -146,7 +151,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="g5M-4f-OJt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gpb-lG-NdV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -162,4 +167,7 @@
     <resources>
         <image name="Bill-512.png" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hl4-8t-XVO"/>
+    </inferredMetricsTieBreakers>
 </document>
