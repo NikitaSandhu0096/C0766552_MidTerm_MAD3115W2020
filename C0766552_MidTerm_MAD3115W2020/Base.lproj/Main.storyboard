@@ -70,9 +70,6 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mvL-Wm-aaU">
                                 <rect key="frame" x="50" y="363" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="swtRemember:" destination="dqs-wN-Dnm" eventType="valueChanged" id="s6F-Rd-Euk"/>
-                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember me?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="004-J7-McR">
                                 <rect key="frame" x="120" y="368" width="137" height="24"/>
@@ -86,15 +83,9 @@
                         <viewLayoutGuide key="safeArea" id="dF3-BV-Yy2"/>
                     </view>
                     <navigationItem key="navigationItem" id="tF4-bD-Wbr">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="zJB-xX-dsr">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5bp-gl-fJZ">
-                                <rect key="frame" x="356" y="13" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="Rbk-iD-Tvf">
                             <connections>
-                                <action selector="bbLogin:" destination="dqs-wN-Dnm" id="FCn-hi-Wrb"/>
-                                <segue destination="1Fh-yG-VrW" kind="showDetail" id="tZl-0w-wE7"/>
+                                <action selector="bbLogin:" destination="dqs-wN-Dnm" id="dB1-K5-NFi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -108,20 +99,20 @@
             <point key="canvasLocation" x="4635" y="98"/>
         </scene>
         <!--Third View Controller-->
-        <scene sceneID="Ogx-kQ-ejM">
+        <scene sceneID="jr4-AV-IEI">
             <objects>
-                <viewController id="1Fh-yG-VrW" customClass="ThirdViewController" customModule="C0766552_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="p6f-K9-uta">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                <viewController storyboardIdentifier="thirdVC" id="yy8-qt-g47" customClass="ThirdViewController" customModule="C0766552_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fNz-zd-RcZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="eXT-bo-Z1T"/>
+                        <viewLayoutGuide key="safeArea" id="lhY-f2-uEz"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MOr-fX-L1G"/>
+                    <navigationItem key="navigationItem" id="91o-gP-agO"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fj8-zc-wDW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6CG-xD-23K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5419" y="98"/>
+            <point key="canvasLocation" x="5399" y="102"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Kxh-ID-rlu">
