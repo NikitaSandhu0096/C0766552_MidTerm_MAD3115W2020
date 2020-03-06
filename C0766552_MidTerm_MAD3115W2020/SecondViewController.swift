@@ -40,11 +40,16 @@ class SecondViewController: UIViewController {
     
     @IBAction func bbLogin(_ sender: UIBarButtonItem) {
         if (txtEmail.text?.emailValid() == true && txtPassword.text != ""){
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            let thirdVC = sb.instantiateViewController(identifier: "thirdVC") as! ThirdViewController
-            self.navigationController?.pushViewController(thirdVC, animated: true)
+            performSegue(withIdentifier: "showNC2", sender: self)
+//            let sb = UIStoryboard(name: "Main", bundle: nil)
+//            let thirdVC = sb.instantiateViewController(identifier: "thirdVC") as! ThirdViewController
+//            self.navigationController?.pushViewController(thirdVC, animated: true)
         }else{
-            print("Enter valid email and password")
+            let alertController = UIAlertController(title: "Login Failed", message:
+                "Enter valid email and password", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            self.present(alertController, animated: true, completion: nil) 
+//            print("Enter valid email and password")
         }
             
     }

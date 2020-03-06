@@ -22,7 +22,7 @@ class FirstViewController: UIViewController {
     }
     
     @objc func waitingTime(){
-        performSegue(withIdentifier: "showNC", sender: self)
+        performSegue(withIdentifier: "showNC1", sender: self)
     }
 
 }
