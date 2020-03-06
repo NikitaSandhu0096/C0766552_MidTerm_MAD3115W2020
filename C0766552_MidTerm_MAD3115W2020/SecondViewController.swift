@@ -23,19 +23,29 @@ class SecondViewController: UIViewController {
         if sender.isOn{
             UserDefaults.standard.set(txtEmail.text, forKey: "email")
             UserDefaults.standard.set(txtPassword.text, forKey: "password")
+            
+            let ud = UserDefaults.standard
+            let email = ud.string(forKey: "email")
+            txtEmail.text = email
+            let password = ud.string(forKey: "password")
+            txtPassword.text = password
+            
         }else{
             UserDefaults.standard.removeObject(forKey: "email")
             UserDefaults.standard.removeObject(forKey: "password")
+            txtEmail.text = ""
+            txtPassword.text = ""
         }
     }
     
     @IBAction func bbLogin(_ sender: UIBarButtonItem) {
-//        if (txtEmail.text != nil && txtPassword.text != nil){
+        if (txtEmail.text?.emailValid() == true && txtPassword.text != ""){
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let thirdVC = sb.instantiateViewController(identifier: "thirdVC") as! ThirdViewController
             self.navigationController?.pushViewController(thirdVC, animated: true)
-//        }else{
-//            print("Enter email and password")
-//        }
+        }else{
+            print("Enter valid email and password")
+        }
+            
     }
 }

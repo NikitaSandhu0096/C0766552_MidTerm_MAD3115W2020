@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE032ADE24122D840000E23E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE032ADD24122D840000E23E /* Extensions.swift */; };
 		EE6EBF0D2411A63B00FF12C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EBF0C2411A63B00FF12C9 /* AppDelegate.swift */; };
 		EE6EBF0F2411A63B00FF12C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EBF0E2411A63B00FF12C9 /* SceneDelegate.swift */; };
 		EE6EBF112411A63B00FF12C9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EBF102411A63B00FF12C9 /* FirstViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE032ADD24122D840000E23E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EE6EBF092411A63B00FF12C9 /* C0766552_MidTerm_MAD3115W2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C0766552_MidTerm_MAD3115W2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6EBF0C2411A63B00FF12C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE6EBF0E2411A63B00FF12C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				EE6EBF1A2411A63C00FF12C9 /* Info.plist */,
 				EE6EBF232411AEF700FF12C9 /* SecondViewController.swift */,
 				EE6EBF252411C85300FF12C9 /* ThirdViewController.swift */,
+				EE032ADD24122D840000E23E /* Extensions.swift */,
 			);
 			path = C0766552_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE6EBF242411AEF700FF12C9 /* SecondViewController.swift in Sources */,
+				EE032ADE24122D840000E23E /* Extensions.swift in Sources */,
 				EE6EBF112411A63B00FF12C9 /* FirstViewController.swift in Sources */,
 				EE6EBF262411C85300FF12C9 /* ThirdViewController.swift in Sources */,
 				EE6EBF0D2411A63B00FF12C9 /* AppDelegate.swift in Sources */,
