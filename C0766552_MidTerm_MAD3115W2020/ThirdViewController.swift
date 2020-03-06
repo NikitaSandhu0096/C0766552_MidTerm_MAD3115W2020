@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  ThirdViewController.swift
 //  C0766552_MidTerm_MAD3115W2020
 //
 //  Created by Nikita Sandhu on 2020-03-05.
@@ -8,22 +8,15 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ThirdViewController: UIViewController {
 
-    @IBOutlet weak var txtEmail: UITextField!
-    @IBOutlet weak var txtPassword: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func swtRemember(_ sender: UISwitch) {
-    }
-    
-    @IBAction func bbLogin(_ sender: UIBarButtonItem) {
-    }
+
     /*
     // MARK: - Navigation
 

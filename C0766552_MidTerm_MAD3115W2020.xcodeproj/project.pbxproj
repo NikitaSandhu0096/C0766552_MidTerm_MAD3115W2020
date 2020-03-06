@@ -15,6 +15,7 @@
 		EE6EBF192411A63C00FF12C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE6EBF172411A63C00FF12C9 /* LaunchScreen.storyboard */; };
 		EE6EBF222411AE7A00FF12C9 /* Bill-512.png in Resources */ = {isa = PBXBuildFile; fileRef = EE6EBF212411AE7900FF12C9 /* Bill-512.png */; };
 		EE6EBF242411AEF700FF12C9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EBF232411AEF700FF12C9 /* SecondViewController.swift */; };
+		EE6EBF262411C85300FF12C9 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EBF252411C85300FF12C9 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EE6EBF1A2411A63C00FF12C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE6EBF212411AE7900FF12C9 /* Bill-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bill-512.png"; sourceTree = "<group>"; };
 		EE6EBF232411AEF700FF12C9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		EE6EBF252411C85300FF12C9 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				EE6EBF172411A63C00FF12C9 /* LaunchScreen.storyboard */,
 				EE6EBF1A2411A63C00FF12C9 /* Info.plist */,
 				EE6EBF232411AEF700FF12C9 /* SecondViewController.swift */,
+				EE6EBF252411C85300FF12C9 /* ThirdViewController.swift */,
 			);
 			path = C0766552_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				EE6EBF242411AEF700FF12C9 /* SecondViewController.swift in Sources */,
 				EE6EBF112411A63B00FF12C9 /* FirstViewController.swift in Sources */,
+				EE6EBF262411C85300FF12C9 /* ThirdViewController.swift in Sources */,
 				EE6EBF0D2411A63B00FF12C9 /* AppDelegate.swift in Sources */,
 				EE6EBF0F2411A63B00FF12C9 /* SceneDelegate.swift in Sources */,
 			);
