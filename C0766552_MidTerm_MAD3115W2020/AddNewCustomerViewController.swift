@@ -10,13 +10,23 @@ import UIKit
 
 class AddNewCustomerViewController: UIViewController {
 
+    @IBOutlet weak var txtCustomerID: UITextField!
+    @IBOutlet weak var txtFirstName: UITextField!
+    @IBOutlet weak var txtLastName: UITextField!
+    @IBOutlet weak var txtEmail: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func bbSave(_ sender: UIBarButtonItem) {
+        UserDefaults.standard.set(txtCustomerID.text, forKey: "customerID")
+        UserDefaults.standard.set(txtFirstName.text, forKey: "firstName")
+        UserDefaults.standard.set(txtLastName.text, forKey: "lastName")
+        UserDefaults.standard.set(txtEmail.text, forKey: "email")
+    }
+    
     /*
     // MARK: - Navigation
 

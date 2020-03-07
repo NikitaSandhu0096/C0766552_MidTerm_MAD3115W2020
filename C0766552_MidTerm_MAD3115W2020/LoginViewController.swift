@@ -25,7 +25,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
     @IBAction func bbLogin(_ sender: UIBarButtonItem) {
         if (txtEmail.text == "nsandhu@gmail.com" && txtPassword.text == "nsandhu"){
         if (txtEmail.text?.emailValid() == true && txtPassword.text != ""){
