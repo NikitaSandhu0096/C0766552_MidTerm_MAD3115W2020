@@ -163,7 +163,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Bill Details" id="QZI-gU-TgF"/>
                     <connections>
-                        <outlet property="lblCustomerDetails" destination="lme-qD-873" id="Mse-CS-aLU"/>
+                        <outlet property="lblCustomerEmail" destination="weC-DZ-M0M" id="bRO-rZ-lxl"/>
+                        <outlet property="lblCustomerID" destination="lme-qD-873" id="xbD-Ql-rW6"/>
+                        <outlet property="lblCustomerName" destination="xIe-e4-5Be" id="uaa-C0-EO6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PBq-GZ-35J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
