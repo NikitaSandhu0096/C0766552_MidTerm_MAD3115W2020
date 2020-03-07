@@ -21,7 +21,13 @@ class AddNewCustomerViewController: UIViewController {
     }
     
     @IBAction func bbSave(_ sender: UIBarButtonItem) {
-        if txtCustomerID.text == ""{
+        if ((txtCustomerID.text == "" && txtFirstName.text == "") && (txtLastName.text == "" && txtEmail.text == "")){
+            let alertController = UIAlertController(title: "Failed", message:
+                "Enter new customer details", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else if txtCustomerID.text == ""{
             let alertController = UIAlertController(title: "Failed", message:
                 "Enter Customer ID", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
