@@ -1,14 +1,14 @@
 //
-//  ThirdViewController.swift
+//  CustomerListViewController.swift
 //  C0766552_MidTerm_MAD3115W2020
 //
-//  Created by Nikita Sandhu on 2020-03-05.
+//  Created by Nikita Sandhu on 2020-03-06.
 //  Copyright © 2020 Nikita Sandhu. All rights reserved.
 //
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class CustomerListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +16,10 @@ class ThirdViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func bbLogout(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
