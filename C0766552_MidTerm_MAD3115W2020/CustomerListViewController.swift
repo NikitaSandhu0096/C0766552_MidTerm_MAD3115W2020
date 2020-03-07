@@ -15,17 +15,18 @@ class CustomerListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadCustomers()
+//        loadCustomers()
+        customerNames = DataStorage.getInstance().getAllCustomers()
         // Do any additional setup after loading the view.
     }
     
-    func loadCustomers(){
-        
-        customerNames.append(Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com"))
-        customerNames.append(Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur@yahoo.com"))
-        customerNames.append(Customer(customerId: "C0003", firstName: "Kashyup", lastName: "Jhaveri", email: "kjhaveri@gmail.com"))
-        
-    }
+//    func loadCustomers(){
+//
+//        customerNames.append(Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com"))
+//        customerNames.append(Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur@yahoo.com"))
+//        customerNames.append(Customer(customerId: "C0003", firstName: "Kashyup", lastName: "Jhaveri", email: "kjhaveri@gmail.com"))
+//
+//    }
     
     @IBAction func bbLogout(_ sender: UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)

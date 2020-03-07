@@ -18,26 +18,28 @@ class DataStorage{
         return instance
     }
     
-    var c1 = (Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com"))
-    var c2 = (Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur@gmail.com"))
-    var c3 = (Customer(customerId: "C0003", firstName: "Kashyup", lastName: "Jhaveri", email: "kjhaveri@gmail.com"))
+//    var c1 = (Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com"))
+//    var c2 = (Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur@gmail.com"))
+//    var c3 = (Customer(customerId: "C0003", firstName: "Kashyup", lastName: "Jhaveri", email: "kjhaveri@gmail.com"))
     
     func addCustomer(customer : Customer){
         let cid = customer.customerId
-        customerDictionary.updateValue(customer, forKey: cid)
+        self.customerDictionary.updateValue(customer, forKey: cid)
     }
     
     func loadCustomerDetails(){
-        addCustomer(customer: c1)
-        addCustomer(customer: c2)
-        addCustomer(customer: c3)
+        customerDictionary.updateValue(Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu"), forKey: "C0001")
+        customerDictionary.updateValue(Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur@gmail.com"), forKey: "C0002")
+        customerDictionary.updateValue(Customer(customerId: "C0003", firstName: "Kashyup", lastName: "Jhaveri", email: "kjhaveri@yahoo.com"), forKey: "C0003")
     }
     
     func getAllCustomers() -> [Customer]{
-        var customers : [Customer] = []
-        for i in customerDictionary{
-            customers.append(i.value)
-        }
-        return customers
+        return Array(customerDictionary.values)
+//        var customers : [Customer] = []
+//        for i in customerDictionary{
+//            customers.append(i.value)
+//        }
+//        return customers
     }
+    
 }

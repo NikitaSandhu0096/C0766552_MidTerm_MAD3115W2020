@@ -21,10 +21,7 @@ class AddNewCustomerViewController: UIViewController {
     }
     
     @IBAction func bbSave(_ sender: UIBarButtonItem) {
-        UserDefaults.standard.set(txtCustomerID.text, forKey: "customerID")
-        UserDefaults.standard.set(txtFirstName.text, forKey: "firstName")
-        UserDefaults.standard.set(txtLastName.text, forKey: "lastName")
-        UserDefaults.standard.set(txtEmail.text, forKey: "email")
+        
     }
     
     /*
