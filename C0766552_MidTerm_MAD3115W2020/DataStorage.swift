@@ -20,7 +20,7 @@ class DataStorage{
     
     var c1 = (Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com"))
     var c2 = (Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur@gmail.com"))
-    var c3 = (Customer(customerId: "C0003", firstName: "Nikita", lastName: "Sandhu", email: "kjhaveri@gmail.com"))
+    var c3 = (Customer(customerId: "C0003", firstName: "Kashyup", lastName: "Jhaveri", email: "kjhaveri@gmail.com"))
     
     func addCustomer(customer : Customer){
         let cid = customer.customerId

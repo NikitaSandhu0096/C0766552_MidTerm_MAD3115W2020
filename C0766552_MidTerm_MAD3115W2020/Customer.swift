@@ -13,7 +13,9 @@ class Customer{
     var customerId : String
     var firstName : String
     var lastName : String
-    var fullName : String = ""
+    var fullName : String {
+        return "\(firstName) \(lastName)"
+    }
     var email : String
 
     init(customerId : String, firstName : String, lastName : String, email : String) {
@@ -21,11 +23,6 @@ class Customer{
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
-    }
-    
-    func name() -> String{
-        self.fullName = "\(self.firstName) \(self.lastName)"
-        return self.fullName
     }
 
 }
