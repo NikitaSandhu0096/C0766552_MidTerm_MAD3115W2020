@@ -21,9 +21,7 @@ class CustomerListViewController: UIViewController {
     
     func loadCustomers(){
         
-        customerNames.append(Customer(customerId: "C00001", name: "Nikita Sandhu", email: "nsandhu@gmail.com"))
-        
-        /*["Afganistan", "Angola", "Aruba", "Canada", "India", "Bahamas", "Ghana", "France", "Nepal", "Kenya", "Bermudas", "Danemark"]    }*/
+        customerNames.append(Customer(customerId: "C00001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com"))
         
     }
     
@@ -46,7 +44,7 @@ extension CustomerListViewController : UITableViewDataSource, UITableViewDelegat
     
         let customer = customerNames[indexPath.row]
 
-        cell?.textLabel?.text = customer.name
+        cell?.textLabel?.text = customer.firstName
 
         return cell!
     }

@@ -11,12 +11,21 @@ import UIKit
 
 class Customer{
     var customerId : String
-    var name : String
+    var firstName : String
+    var lastName : String
+    var fullName : String = ""
     var email : String
 
-    init(customerId : String, name : String, email : String) {
+    init(customerId : String, firstName : String, lastName : String, email : String) {
         self.customerId = customerId
-        self.name = name
+        self.firstName = firstName
+        self.lastName = lastName
         self.email = email
     }
+    
+    func name() -> String{
+        self.fullName = "\(self.firstName) \(self.lastName)"
+        return self.fullName
+    }
+
 }
