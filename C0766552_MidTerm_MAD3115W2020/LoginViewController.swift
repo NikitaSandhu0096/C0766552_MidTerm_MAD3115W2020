@@ -16,24 +16,43 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        if swhRemember.isOn{
+//            txtEmail.text = self.value(forKey: "txtEmail") as? String
+//            txtPassword.text = self.value(forKey: "txtPassword") as? String
+//        }else{
+//            txtEmail.text = ""
+//            txtPassword.text = ""
+//        }
 
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if swhRemember.isOn != true{
+            txtEmail.text = ""
+            txtPassword.text = ""
+        }
+    }
+    
+    
     @IBAction func bbLogin(_ sender: UIBarButtonItem) {
         if (txtEmail.text?.emailValid() == true && txtPassword.text != ""){
-            if swhRemember.isOn{
-                UserDefaults.standard.set(txtEmail.text, forKey: "email")
-                UserDefaults.standard.set(txtPassword.text, forKey: "password")
-                
+//            if swhRemember.isOn{
+//                UserDefaults.standard.set(txtEmail.text, forKey: "email")
+//                UserDefaults.standard.set(txtPassword.text, forKey: "password")
+//
+//                let sb = UIStoryboard(name: "Main", bundle: nil)
+//                let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListViewController
+//                self.navigationController?.pushViewController(customerListVC, animated: true)
+//
+////           performSegue(withIdentifier: "showNC2", sender: self)
+//            }else{
                 let sb = UIStoryboard(name: "Main", bundle: nil)
                 let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListViewController
                 self.navigationController?.pushViewController(customerListVC, animated: true)
-                
-//           performSegue(withIdentifier: "showNC2", sender: self)
-            }else{
-                performSegue(withIdentifier: "showNC2", sender: self)
-            }
+//                performSegue(withIdentifier: "showNC2", sender: self)
+//            }
 //
         }else{
             let alertController = UIAlertController(title: "Login Failed", message:
