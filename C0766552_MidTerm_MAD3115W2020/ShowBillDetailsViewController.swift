@@ -17,6 +17,22 @@ class ShowBillDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let ud = UserDefaults.standard
+        
+        let cid = ud.string(forKey: "cid")
+        if let nm1 = cid{
+            lblCustomerID.text = "Customer ID : \(nm1)"
+        }
+
+        let fname = ud.string(forKey: "fname")
+        if let nm2 = fname{
+            lblCustomerName.text = "Customer Name : \(nm2)"
+        }
+
+        let lname = ud.string(forKey: "name")
+        if let nm3 = lname{
+            lblCustomerEmail.text = "Customer email : \(nm3)"
+        }
         // Do any additional setup after loading the view.
     }
 

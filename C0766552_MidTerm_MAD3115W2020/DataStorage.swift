@@ -10,7 +10,7 @@ import Foundation
 
 class DataStorage{
     private static let instance = DataStorage()
-    private lazy var customerList : [Customer] = []
+    private lazy var customerDictionary = [String : Customer]()
     
     private init(){}
     
@@ -18,19 +18,26 @@ class DataStorage{
         return instance
     }
     
-    func addCustomer(customer : Customer){
-        self.customerList.append(customer)
-    }
+    var c1 = (Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com"))
+    var c2 = (Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur@gmail.com"))
+    var c3 = (Customer(customerId: "C0003", firstName: "Nikita", lastName: "Sandhu", email: "kjhaveri@gmail.com"))
     
-    func getAllCustomers() -> [Customer]{
-        return self.customerList
+    func addCustomer(customer : Customer){
+        let cid = customer.customerId
+        customerDictionary.updateValue(customer, forKey: cid)
     }
     
     func loadCustomerDetails(){
-        customerList.append(Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com"))
-        customerList.append(Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur234@yahoo.com"))
-        customerList.append(Customer(customerId: "C0003", firstName: "Jyoti", lastName: "Thomas", email: "jthomas@gmail.com"))
-        customerList.append(Customer(customerId: "C0004", firstName: "Charmi", lastName: "Patel", email: "cpatel57@yahoo.com"))
-        customerList.append(Customer(customerId: "C0005", firstName: "Avni", lastName: "Patel", email: "apatel876@"))
+        addCustomer(customer: c1)
+        addCustomer(customer: c2)
+        addCustomer(customer: c3)
+    }
+    
+    func getAllCustomers() -> [Customer]{
+        var customers : [Customer] = []
+        for i in customerDictionary{
+            customers.append(i.value)
+        }
+        return customers
     }
 }

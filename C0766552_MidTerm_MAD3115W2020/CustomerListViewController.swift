@@ -45,7 +45,12 @@ extension CustomerListViewController : UITableViewDataSource, UITableViewDelegat
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerCell")
     
         let customer = customerNames[indexPath.row]
-
+        
+//        UserDefaults.standard.set(customer.customerId, forKey: "cid")
+//        UserDefaults.standard.set(customer.firstName, forKey: "fname")
+//        UserDefaults.standard.set(customer.lastName, forKey: "lname")
+//        UserDefaults.standard.set(customer.email, forKey: "email")
+        
         cell?.textLabel?.text = customer.firstName
 
         return cell!
