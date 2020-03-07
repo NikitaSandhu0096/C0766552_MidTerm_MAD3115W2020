@@ -21,6 +21,41 @@ class AddNewCustomerViewController: UIViewController {
     }
     
     @IBAction func bbSave(_ sender: UIBarButtonItem) {
+        if txtCustomerID.text == ""{
+            let alertController = UIAlertController(title: "Failed", message:
+                "Enter Customer ID", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtFirstName.text == ""{
+            let alertController = UIAlertController(title: "Failed", message:
+                "Enter Customer First Name", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtLastName.text == ""{
+            let alertController = UIAlertController(title: "Failed", message:
+                "Enter Customer Last Name", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtEmail.text == ""{
+            let alertController = UIAlertController(title: "Failed", message:
+                "Enter email", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else{
+            if txtEmail.text?.emailValid() == true{
+                DataStorage.getInstance().addCustomer(customer: Customer(customerId: txtCustomerID.text ?? "", firstName: txtFirstName.text ?? "", lastName: txtLastName.text ?? "", email: txtEmail.text ?? ""))
+                let alertController = UIAlertController(title: "Saved", message:
+                    "New Customer created", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                self.present(alertController, animated: true, completion: nil)
+            }else{
+                let alertController = UIAlertController(title: "Failed", message:
+                    "Enter valid email", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+        
         
     }
     

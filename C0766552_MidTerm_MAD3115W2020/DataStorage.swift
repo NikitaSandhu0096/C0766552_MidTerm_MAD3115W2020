@@ -18,10 +18,6 @@ class DataStorage{
         return instance
     }
     
-//    var c1 = (Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com"))
-//    var c2 = (Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur@gmail.com"))
-//    var c3 = (Customer(customerId: "C0003", firstName: "Kashyup", lastName: "Jhaveri", email: "kjhaveri@gmail.com"))
-    
     func addCustomer(customer : Customer){
         let cid = customer.customerId
         self.customerDictionary.updateValue(customer, forKey: cid)
@@ -35,11 +31,6 @@ class DataStorage{
     
     func getAllCustomers() -> [Customer]{
         return Array(customerDictionary.values)
-//        var customers : [Customer] = []
-//        for i in customerDictionary{
-//            customers.append(i.value)
-//        }
-//        return customers
     }
     
 }
