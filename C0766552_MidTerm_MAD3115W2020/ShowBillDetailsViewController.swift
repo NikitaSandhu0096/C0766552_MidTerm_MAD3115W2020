@@ -13,7 +13,7 @@ class ShowBillDetailsViewController: UIViewController {
     @IBOutlet weak var lblCustomerID: UILabel!
     @IBOutlet weak var lblCustomerName: UILabel!
     @IBOutlet weak var lblCustomerEmail: UILabel!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 

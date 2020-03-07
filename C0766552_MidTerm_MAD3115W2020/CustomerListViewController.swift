@@ -21,7 +21,9 @@ class CustomerListViewController: UIViewController {
     
     func loadCustomers(){
         
-        customerNames.append(Customer(customerId: "C00001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com"))
+        customerNames.append(Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com"))
+        customerNames.append(Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur@yahoo.com"))
+        customerNames.append(Customer(customerId: "C0003", firstName: "Kashyup", lastName: "Jhaveri", email: "kjhaveri@gmail.com"))
         
     }
     
@@ -53,6 +55,7 @@ extension CustomerListViewController : UITableViewDataSource, UITableViewDelegat
         tableView.deselectRow(at: indexPath, animated: true)
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let showBillDetailsVC = sb.instantiateViewController(identifier: "showBillDetailsVC") as! ShowBillDetailsViewController
+        
         self.navigationController?.pushViewController(showBillDetailsVC, animated: true)
     }
 }

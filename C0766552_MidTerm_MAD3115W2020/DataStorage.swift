@@ -29,8 +29,8 @@ class DataStorage{
     func loadCustomerDetails(){
         customerList.append(Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com"))
         customerList.append(Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur234@yahoo.com"))
-        customerList.append(Customer(customerId: "C0003", firstName: "Jyoti", lastName: "Thomas", email: "JyotiThomas@gmail.com"))
-        customerList.append(Customer(customerId: "C0004", firstName: "Charmi", lastName: "Patel", email: "Charmi56@yahoo.com"))
-        customerList.append(Customer(customerId: "C0005", firstName: "Avni", lastName: "Patel", email: "Avnip@"))
+        customerList.append(Customer(customerId: "C0003", firstName: "Jyoti", lastName: "Thomas", email: "jthomas@gmail.com"))
+        customerList.append(Customer(customerId: "C0004", firstName: "Charmi", lastName: "Patel", email: "cpatel57@yahoo.com"))
+        customerList.append(Customer(customerId: "C0005", firstName: "Avni", lastName: "Patel", email: "apatel876@"))
     }
 }
