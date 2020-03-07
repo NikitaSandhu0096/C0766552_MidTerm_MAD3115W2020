@@ -27,12 +27,13 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func bbLogin(_ sender: UIBarButtonItem) {
+        if (txtEmail.text == "nsandhu@gmail.com" && txtPassword.text == "nsandhu"){
         if (txtEmail.text?.emailValid() == true && txtPassword.text != ""){
 
                 let sb = UIStoryboard(name: "Main", bundle: nil)
                 let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListViewController
                 self.navigationController?.pushViewController(customerListVC, animated: true)
-
+            }
         }else{
             let alertController = UIAlertController(title: "Login Failed", message:
                 "Enter valid email and password", preferredStyle: .alert)
