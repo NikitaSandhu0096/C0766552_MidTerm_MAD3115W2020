@@ -50,10 +50,16 @@ class AddNewCustomerViewController: UIViewController {
         }else{
             if txtEmail.text?.emailValid() == true{
                 DataStorage.getInstance().addCustomer(customer: Customer(customerId: txtCustomerID.text ?? "", firstName: txtFirstName.text ?? "", lastName: txtLastName.text ?? "", email: txtEmail.text ?? ""))
-                let alertController = UIAlertController(title: "Saved", message:
-                    "New Customer created", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-                self.present(alertController, animated: true, completion: nil)
+                
+//                let alertController = UIAlertController(title: "Saved", message:
+//                    "New Customer created", preferredStyle: .alert)
+//                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+//                self.present(alertController, animated: true, completion: nil)
+
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListViewController
+                self.navigationController?.pushViewController(customerListVC, animated: true)
+                
             }else{
                 let alertController = UIAlertController(title: "Failed", message:
                     "Enter valid email", preferredStyle: .alert)
