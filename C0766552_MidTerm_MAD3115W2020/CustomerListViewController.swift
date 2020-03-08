@@ -16,14 +16,12 @@ class CustomerListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
     }
     
     override func viewWillAppear(_ animated: Bool) {
         customerNames = DataStorage.getInstance().getAllCustomers()
         tblCustomers.reloadData()
     }
-    
     
     @IBAction func bbLogout(_ sender: UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
@@ -44,7 +42,7 @@ extension CustomerListViewController : UITableViewDataSource, UITableViewDelegat
     
         let customer = customerNames[indexPath.row]
 
-        cell?.textLabel?.text = customer.firstName
+        cell?.textLabel?.text = customer.fullName
 
         return cell!
     }
