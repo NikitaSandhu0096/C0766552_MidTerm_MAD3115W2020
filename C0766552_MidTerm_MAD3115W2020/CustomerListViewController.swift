@@ -17,11 +17,10 @@ class CustomerListViewController: UIViewController {
         super.viewDidLoad()
 
        
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
-         customerNames = DataStorage.getInstance().getAllCustomers()
+        customerNames = DataStorage.getInstance().getAllCustomers()
         tblCustomers.reloadData()
     }
     
@@ -52,9 +51,11 @@ extension CustomerListViewController : UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let c = DataStorage.getInstance().getAllCustomers()
+        let sc = c[indexPath.row]
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let showBillDetailsVC = sb.instantiateViewController(identifier: "showBillDetailsVC") as! ShowBillDetailsViewController
-        
+        showBillDetailsVC.customer = sc
         self.navigationController?.pushViewController(showBillDetailsVC, animated: true)
     }
 }
