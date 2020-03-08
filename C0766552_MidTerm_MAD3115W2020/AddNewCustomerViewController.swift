@@ -56,10 +56,11 @@ class AddNewCustomerViewController: UIViewController {
 //                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
 //                self.present(alertController, animated: true, completion: nil)
 
-                let sb = UIStoryboard(name: "Main", bundle: nil)
-                let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListViewController
-                self.navigationController?.pushViewController(customerListVC, animated: true)
-                
+//                let sb = UIStoryboard(name: "Main", bundle: nil)
+//                let customerListVC = sb.instantiateViewController(identifier: "customerListVC") as! CustomerListViewController
+//                self.navigationController?.pushViewController(customerListVC, animated: true)
+
+                navigationController?.popViewController(animated: true);
             }else{
                 let alertController = UIAlertController(title: "Failed", message:
                     "Enter valid email", preferredStyle: .alert)

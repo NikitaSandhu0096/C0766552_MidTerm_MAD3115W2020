@@ -92,7 +92,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="yy8-qt-g47" id="wjU-o9-aXc"/>
-                                    <outlet property="delegate" destination="yy8-qt-g47" id="nRe-oI-Dya"/>
+                                    <outlet property="delegate" destination="yy8-qt-g47" id="6xb-VA-8DT"/>
                                 </connections>
                             </tableView>
                         </subviews>

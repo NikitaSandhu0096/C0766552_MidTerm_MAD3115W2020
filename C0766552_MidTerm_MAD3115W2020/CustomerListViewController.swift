@@ -16,9 +16,15 @@ class CustomerListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        customerNames = DataStorage.getInstance().getAllCustomers()
+       
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+         customerNames = DataStorage.getInstance().getAllCustomers()
+        tblCustomers.reloadData()
+    }
+    
     
     @IBAction func bbLogout(_ sender: UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
