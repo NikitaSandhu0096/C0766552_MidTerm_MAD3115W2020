@@ -35,8 +35,8 @@ class LoginViewController: UIViewController {
             }
         }else{
             let alertController = UIAlertController(title: "Login Failed", message:
-                "Enter valid email and password", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                "Invalid email and password", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }
             
