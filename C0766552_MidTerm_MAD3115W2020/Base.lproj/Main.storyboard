@@ -128,7 +128,7 @@
             </objects>
             <point key="canvasLocation" x="6221.739130434783" y="97.767857142857139"/>
         </scene>
-        <!--Bill Details-->
+        <!--Customer Details-->
         <scene sceneID="qmN-54-aTH">
             <objects>
                 <viewController storyboardIdentifier="showBillDetailsVC" id="RoR-hN-AcC" customClass="ShowBillDetailsViewController" customModule="C0766552_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -137,28 +137,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lme-qD-873">
-                                <rect key="frame" x="195" y="104" width="219" height="21"/>
+                                <rect key="frame" x="208" y="104" width="206" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIe-e4-5Be">
-                                <rect key="frame" x="195" y="142" width="219" height="21"/>
+                                <rect key="frame" x="208" y="142" width="206" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weC-DZ-M0M">
-                                <rect key="frame" x="195" y="212" width="219" height="21"/>
+                                <rect key="frame" x="208" y="212" width="206" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mei-fG-9fs">
-                                <rect key="frame" x="195" y="177" width="239" height="21"/>
+                                <rect key="frame" x="208" y="177" width="226" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -196,7 +196,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="0ph-C7-yB9"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Bill Details" id="QZI-gU-TgF"/>
+                    <navigationItem key="navigationItem" title="Customer Details" id="QZI-gU-TgF"/>
                     <connections>
                         <outlet property="lblCustomerEmail" destination="weC-DZ-M0M" id="jZQ-W4-aSN"/>
                         <outlet property="lblCustomerFirstName" destination="xIe-e4-5Be" id="U09-n5-KvK"/>
