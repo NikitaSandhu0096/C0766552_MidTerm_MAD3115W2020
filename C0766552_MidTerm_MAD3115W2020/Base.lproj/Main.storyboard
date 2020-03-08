@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Sign In-->
         <scene sceneID="L05-d3-qzI">
             <objects>
                 <viewController storyboardIdentifier="loginVC" id="dqs-wN-Dnm" customClass="LoginViewController" customModule="C0766552_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,7 +42,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dF3-BV-Yy2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tF4-bD-Wbr">
+                    <navigationItem key="navigationItem" title="Sign In" id="tF4-bD-Wbr">
                         <barButtonItem key="rightBarButtonItem" title="Login" id="Rbk-iD-Tvf">
                             <connections>
                                 <action selector="bbLogin:" destination="dqs-wN-Dnm" id="dB1-K5-NFi"/>
@@ -223,7 +223,7 @@
             </objects>
             <point key="canvasLocation" x="7000.0000000000009" y="99.776785714285708"/>
         </scene>
-        <!--Add New Customer View Controller-->
+        <!--New Customer-->
         <scene sceneID="bCj-Ch-1yj">
             <objects>
                 <viewController storyboardIdentifier="addNewCustVC" id="mhY-D0-hSm" customClass="AddNewCustomerViewController" customModule="C0766552_MidTerm_MAD3115W2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -249,24 +249,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Customer Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yk-Kv-xAu">
-                                <rect key="frame" x="124" y="112" width="171" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3v0-mI-qmQ">
                                 <rect key="frame" x="41" y="393" width="341" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter New Customer Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yk-Kv-xAu">
+                                <rect key="frame" x="104" y="115" width="215" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="k6K-aU-q8b"/>
                     </view>
-                    <navigationItem key="navigationItem" id="d8a-OQ-0a6">
+                    <navigationItem key="navigationItem" title="New Customer" id="d8a-OQ-0a6">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="Bio-4y-hXQ">
                             <connections>
                                 <action selector="bbSave:" destination="mhY-D0-hSm" id="OZI-ps-Qsy"/>

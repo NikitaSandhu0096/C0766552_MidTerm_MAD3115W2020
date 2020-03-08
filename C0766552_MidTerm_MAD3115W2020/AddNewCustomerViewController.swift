@@ -22,28 +22,28 @@ class AddNewCustomerViewController: UIViewController {
     
     @IBAction func bbSave(_ sender: UIBarButtonItem) {
         if ((txtCustomerID.text == "" && txtFirstName.text == "") && (txtLastName.text == "" && txtEmail.text == "")){
-            let alertController = UIAlertController(title: "New customers creation failed", message:
-                "Enter new customer details", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "No new customer created", message:
+                "Enter all the required details to create new customer", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }
         else if txtCustomerID.text == ""{
-            let alertController = UIAlertController(title: "New customers creation failed", message:
+            let alertController = UIAlertController(title: "No new customer created", message:
                 "Enter Customer ID", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else if txtFirstName.text == ""{
-            let alertController = UIAlertController(title: "New customers creation failed", message:
+            let alertController = UIAlertController(title: "No new customer created", message:
                 "Enter Customer First Name", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else if txtLastName.text == ""{
-            let alertController = UIAlertController(title: "New customers creation failed", message:
+            let alertController = UIAlertController(title: "No new customer created", message:
                 "Enter Customer Last Name", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else if txtEmail.text == ""{
-            let alertController = UIAlertController(title: "New customers creation failed", message:
+            let alertController = UIAlertController(title: "No new customer created", message:
                 "Enter email", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
@@ -53,7 +53,7 @@ class AddNewCustomerViewController: UIViewController {
 
                 navigationController?.popViewController(animated: true);
             }else{
-                let alertController = UIAlertController(title: "New customers creation failed", message:
+                let alertController = UIAlertController(title: "No new customer created", message:
                     "Enter valid email", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alertController, animated: true, completion: nil)
