@@ -49,4 +49,9 @@ extension Float{
         return u
     }
     
+    func currencyPerMin() -> String {
+        let m = String.init(format: "$%.2f/minute", self)
+        return m
+    }
+    
 }
