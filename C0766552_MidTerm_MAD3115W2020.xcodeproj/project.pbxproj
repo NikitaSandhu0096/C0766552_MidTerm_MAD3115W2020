@@ -61,6 +61,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B4DF3C22416F136007F8DC5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE6EBF232411AEF700FF12C9 /* LoginViewController.swift */,
+				EEB79EEB24132EB700AD0D36 /* CustomerListViewController.swift */,
+				EE2BE15824136F8000357A27 /* ShowBillDetailsViewController.swift */,
+				EE0C157C24142387009B303C /* AddNewCustomerViewController.swift */,
+				9B4DF3B82416E991007F8DC5 /* AddNewBillViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9B4DF3C32416F268007F8DC5 /* Bill */ = {
+			isa = PBXGroup;
+			children = (
+				9B4DF3BA2416EB73007F8DC5 /* Bill.swift */,
+				9B4DF3BC2416EBF6007F8DC5 /* Internet.swift */,
+				9B4DF3BE2416EC66007F8DC5 /* Mobile.swift */,
+				9B4DF3C02416EC9A007F8DC5 /* Hydro.swift */,
+			);
+			path = Bill;
+			sourceTree = "<group>";
+		};
 		EE6EBF002411A63B00FF12C9 = {
 			isa = PBXGroup;
 			children = (
@@ -80,25 +103,18 @@
 		EE6EBF0B2411A63B00FF12C9 /* C0766552_MidTerm_MAD3115W2020 */ = {
 			isa = PBXGroup;
 			children = (
+				9B4DF3C22416F136007F8DC5 /* View Controllers */,
 				EE6EBF202411AA6A00FF12C9 /* Images */,
+				9B4DF3C32416F268007F8DC5 /* Bill */,
 				EE6EBF0C2411A63B00FF12C9 /* AppDelegate.swift */,
 				EE6EBF0E2411A63B00FF12C9 /* SceneDelegate.swift */,
 				EE6EBF122411A63B00FF12C9 /* Main.storyboard */,
 				EE6EBF152411A63C00FF12C9 /* Assets.xcassets */,
 				EE6EBF172411A63C00FF12C9 /* LaunchScreen.storyboard */,
 				EE6EBF1A2411A63C00FF12C9 /* Info.plist */,
-				EE6EBF232411AEF700FF12C9 /* LoginViewController.swift */,
-				EEB79EEB24132EB700AD0D36 /* CustomerListViewController.swift */,
-				EE2BE15824136F8000357A27 /* ShowBillDetailsViewController.swift */,
-				EE0C157C24142387009B303C /* AddNewCustomerViewController.swift */,
-				EE2BE15624136B5D00357A27 /* Customer.swift */,
 				EE032ADD24122D840000E23E /* Extensions.swift */,
 				EE0C157E24142D51009B303C /* DataStorage.swift */,
-				9B4DF3B82416E991007F8DC5 /* AddNewBillViewController.swift */,
-				9B4DF3BA2416EB73007F8DC5 /* Bill.swift */,
-				9B4DF3BC2416EBF6007F8DC5 /* Internet.swift */,
-				9B4DF3BE2416EC66007F8DC5 /* Mobile.swift */,
-				9B4DF3C02416EC9A007F8DC5 /* Hydro.swift */,
+				EE2BE15624136B5D00357A27 /* Customer.swift */,
 			);
 			path = C0766552_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
