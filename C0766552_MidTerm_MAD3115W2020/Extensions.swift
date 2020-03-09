@@ -19,3 +19,11 @@ extension String{
         return mobileTest.evaluate(with: self)
     }
 }
+
+extension Int{
+    
+    func dataUsed() -> String{
+        let g = String.init(format: "%i GB", self)
+        return g
+    }
+}
