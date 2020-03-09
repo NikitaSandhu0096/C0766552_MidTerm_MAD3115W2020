@@ -44,4 +44,9 @@ extension Float{
         return p
     }
     
+    func currencyPerUnit() -> String {
+        let u = String.init(format: "$%.2f/Unit", self)
+        return u
+    }
+    
 }
