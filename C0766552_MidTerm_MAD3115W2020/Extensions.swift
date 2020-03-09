@@ -26,4 +26,9 @@ extension Int{
         let g = String.init(format: "%i GB", self)
         return g
     }
+    
+    func time() -> String {
+        let t = String.init(format: "%i minutets", self)
+        return t
+    }
 }
