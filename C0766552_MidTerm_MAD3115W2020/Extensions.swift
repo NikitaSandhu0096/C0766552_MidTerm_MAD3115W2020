@@ -32,3 +32,10 @@ extension Int{
         return t
     }
 }
+
+extension Float{
+    func currency() -> String{
+        let c = String.init(format: "$%.2f", self)
+        return c
+    }
+}
