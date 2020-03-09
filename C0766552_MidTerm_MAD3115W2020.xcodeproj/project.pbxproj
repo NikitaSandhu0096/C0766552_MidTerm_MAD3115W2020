@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B4DF3B92416E991007F8DC5 /* AddNewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4DF3B82416E991007F8DC5 /* AddNewBillViewController.swift */; };
 		EE032ADE24122D840000E23E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE032ADD24122D840000E23E /* Extensions.swift */; };
 		EE0C157D24142387009B303C /* AddNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0C157C24142387009B303C /* AddNewCustomerViewController.swift */; };
 		EE0C157F24142D51009B303C /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0C157E24142D51009B303C /* DataStorage.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B4DF3B82416E991007F8DC5 /* AddNewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBillViewController.swift; sourceTree = "<group>"; };
 		EE032ADD24122D840000E23E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EE0C157C24142387009B303C /* AddNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCustomerViewController.swift; sourceTree = "<group>"; };
 		EE0C157E24142D51009B303C /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				EE2BE15624136B5D00357A27 /* Customer.swift */,
 				EE032ADD24122D840000E23E /* Extensions.swift */,
 				EE0C157E24142D51009B303C /* DataStorage.swift */,
+				9B4DF3B82416E991007F8DC5 /* AddNewBillViewController.swift */,
 			);
 			path = C0766552_MidTerm_MAD3115W2020;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				EE2BE15724136B5D00357A27 /* Customer.swift in Sources */,
 				EE0C157D24142387009B303C /* AddNewCustomerViewController.swift in Sources */,
 				EE6EBF0D2411A63B00FF12C9 /* AppDelegate.swift in Sources */,
+				9B4DF3B92416E991007F8DC5 /* AddNewBillViewController.swift in Sources */,
 				EE6EBF0F2411A63B00FF12C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
