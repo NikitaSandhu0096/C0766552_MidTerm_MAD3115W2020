@@ -53,9 +53,4 @@ extension Float{
         let m = String.init(format: "$%.2f/minute", self)
         return m
     }
-    
-    func currencyInsuranceRate() -> String{
-        let i = String.init(format: "$%.2f/month", self)
-        return i
-    }
 }
