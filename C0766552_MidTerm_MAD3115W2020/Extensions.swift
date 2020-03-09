@@ -38,4 +38,10 @@ extension Float{
         let c = String.init(format: "$%.2f", self)
         return c
     }
+    
+    func currencyPerGB() -> String{
+        let p = String.init(format: "$%.2f/GB", self)
+        return p
+    }
+    
 }
