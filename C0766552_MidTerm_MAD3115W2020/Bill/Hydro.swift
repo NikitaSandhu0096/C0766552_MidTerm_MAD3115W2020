@@ -12,17 +12,10 @@ class Hydro : Bill{
     
     var agencyName : String
     var unitConsumed : Int
-    var hyrdoRate : Float
     
-    init(billId: String, billDate: String, billType: type, agencyName : String, unitConsumed : Int, hydroRate : Float) {
+    init(billId: String, billDate: String, billType: type, agencyName : String, unitConsumed : Int) {
         self.agencyName = agencyName
         self.unitConsumed = unitConsumed
-        self.hyrdoRate = hydroRate
         super.init(billId: billId, billDate: billDate, billType: billType)
-    }
-    
-    func calculateBill() -> Float {
-        totalBillAmount = Float(self.unitConsumed) * self.hyrdoRate
-        return totalBillAmount
     }
 }
