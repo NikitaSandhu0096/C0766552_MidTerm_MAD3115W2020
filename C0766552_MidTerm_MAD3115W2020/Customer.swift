@@ -17,12 +17,17 @@ class Customer{
         return "\(firstName) \(lastName)"
     }
     var email : String
+    private lazy var bills = [String : Bill]()
 
     init(customerId : String, firstName : String, lastName : String, email : String) {
         self.customerId = customerId
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
+    }
+    
+    func addBill(bill : Bill, billId : String) {
+        bills.updateValue(bill, forKey: billId)
     }
 
 }

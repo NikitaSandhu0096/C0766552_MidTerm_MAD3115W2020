@@ -211,7 +211,11 @@
                         <viewLayoutGuide key="safeArea" id="0ph-C7-yB9"/>
                     </view>
                     <navigationItem key="navigationItem" title="Customer Details" id="QZI-gU-TgF">
-                        <barButtonItem key="rightBarButtonItem" title="Add New Bill" id="xPD-Mw-dER"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add New Bill" id="xPD-Mw-dER">
+                            <connections>
+                                <action selector="bbAddNewBill:" destination="RoR-hN-AcC" id="Tvt-Nn-Xfg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="lblCustomerEmail" destination="weC-DZ-M0M" id="jZQ-W4-aSN"/>

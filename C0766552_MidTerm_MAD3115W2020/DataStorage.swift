@@ -27,6 +27,8 @@ class DataStorage{
         customerDictionary.updateValue(Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com"), forKey: "C0001")
         customerDictionary.updateValue(Customer(customerId: "C0002", firstName: "Kamal", lastName: "Kaur", email: "kkaur@gmail.com"), forKey: "C0002")
         customerDictionary.updateValue(Customer(customerId: "C0003", firstName: "Kashyap", lastName: "Jhaveri", email: "kjhaveri@yahoo.com"), forKey: "C0003")
+        
+        
     }
     
     func getAllCustomers() -> [Customer]{

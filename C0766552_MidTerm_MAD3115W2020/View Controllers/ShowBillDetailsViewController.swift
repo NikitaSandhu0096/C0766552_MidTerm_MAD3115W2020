@@ -8,14 +8,8 @@
 
 import UIKit
 
-class ShowBillDetailsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    
-    
-    var billPicker : UIPickerView!
-    
-    var billList = ["Hydro", "Mobile", "Internet"]
-    
+class ShowBillDetailsViewController: UIViewController {
+
     var customer : Customer?
 
     @IBOutlet weak var lblCustomerID: UILabel!
@@ -32,37 +26,35 @@ class ShowBillDetailsViewController: UIViewController, UIPickerViewDelegate, UIP
         lblCustomerFullName.text = customer?.fullName
         lblCustomerEmail.text = customer?.email
         
-        billPicker.dataSource = self
-        billPicker.delegate = self
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        1
-    }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.billList.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return billList[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if row == 0{
+    @IBAction func bbAddNewBill(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Add new bill", message: "Select type of bill", preferredStyle: .actionSheet);
+        alert.addAction(UIAlertAction(title: "Hydro", style: .default, handler: { (action) in
+            
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let addNewHydroBillVC = sb.instantiateViewController(identifier: "addNewHydroBillVC") as! AddNewHydroBillViewController
             self.navigationController?.pushViewController(addNewHydroBillVC, animated: true)
-        } else if row == 1{
+            
+        }));
+        alert.addAction(UIAlertAction(title: "Mobile", style: .default, handler:{ (action) in
+            
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let addNewMobileBillVC = sb.instantiateViewController(identifier: "addNewMobileBillVC") as! AddNewMobileViewController
             self.navigationController?.pushViewController(addNewMobileBillVC, animated: true)
-        } else{
+            
+        }));
+        alert.addAction(UIAlertAction(title: "Internet", style: .default, handler:{ (action) in
+            
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let addNewInternetBillVC = sb.instantiateViewController(identifier: "addNewInternetBillVC") as! AddNewInternetViewController
             self.navigationController?.pushViewController(addNewInternetBillVC, animated: true)
-        }
+            
+        }));
+        self.present(alert, animated: true, completion: nil);
+        
     }
-
+    
 }
 
