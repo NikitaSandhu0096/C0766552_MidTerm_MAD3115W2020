@@ -9,6 +9,7 @@
 import UIKit
 
 class AddNewInternetViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet weak var textField_Date: UITextField!
     var datePicker : UIDatePicker!
         
@@ -16,7 +17,11 @@ class AddNewInternetViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         textField_Date.delegate = self
     }
-        
+    
+    @IBAction func bAddBill(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()

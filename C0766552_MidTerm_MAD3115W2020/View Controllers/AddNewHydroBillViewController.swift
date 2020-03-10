@@ -18,6 +18,10 @@ class AddNewHydroBillViewController: UIViewController, UITextFieldDelegate {
         textField_Date.delegate = self
     }
    
+    @IBAction func bAddBill(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
