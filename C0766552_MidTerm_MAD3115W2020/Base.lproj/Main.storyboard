@@ -341,6 +341,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="cTG-id-G1n"/>
                     </view>
+                    <connections>
+                        <outlet property="textField_Date" destination="1dD-xc-lND" id="CHz-Xi-zGS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J68-am-IOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
