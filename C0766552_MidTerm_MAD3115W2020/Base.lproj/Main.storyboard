@@ -303,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m7F-Fe-VtH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7693" y="-569"/>
+            <point key="canvasLocation" x="7148" y="-551"/>
         </scene>
         <!--Add New Hydro Bill View Controller-->
         <scene sceneID="XMD-k3-1yj">
@@ -376,7 +376,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J68-am-IOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8228" y="611"/>
+            <point key="canvasLocation" x="7968" y="611"/>
         </scene>
         <!--Add New Mobile View Controller-->
         <scene sceneID="jTR-Fx-sTx">
@@ -465,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8m-G6-vZT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9077" y="611"/>
+            <point key="canvasLocation" x="8752" y="611"/>
         </scene>
         <!--Add New Internet View Controller-->
         <scene sceneID="YFF-kb-wfh">
@@ -536,7 +536,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekY-7g-oea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9957" y="611"/>
+            <point key="canvasLocation" x="9543" y="611"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Kxh-ID-rlu">
