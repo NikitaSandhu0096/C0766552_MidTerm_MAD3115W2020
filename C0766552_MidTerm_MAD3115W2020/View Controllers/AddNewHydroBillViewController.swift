@@ -25,8 +25,40 @@ class AddNewHydroBillViewController: UIViewController, UITextFieldDelegate {
     }
    
     @IBAction func bAddBill(_ sender: UIButton) {
+        if (((txtBillID.text == "" && txtBillDate.text == "") && (txtBillAmount.text == "" && txtAgencyName.text == "")) && (txtUnitConsumed.text == "")){
+            let alertController = UIAlertController(title: "No new Hydro Bill created", message:
+                "Enter all the required details to create new Hydro Bill", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        } else if txtBillID.text == ""{
+            let alertController = UIAlertController(title: "No new Hydro Bill created", message:
+                "Enter Bill ID", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtBillDate.text == ""{
+            let alertController = UIAlertController(title: "No new Hydro Bill created", message:
+                "Enter Bill Date", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtBillAmount.text == ""{
+            let alertController = UIAlertController(title: "No new Hydro Bill created", message:
+                "Enter Bill Amount", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtAgencyName.text == ""{
+            let alertController = UIAlertController(title: "No new Hydro Bill created", message:
+                "Enter Agency Name", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtUnitConsumed.text == ""{
+            let alertController = UIAlertController(title: "No new Hydro Bill created", message:
+                "Enter Unit Consumed", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else{
+            navigationController?.popViewController(animated: true)
+        }
         
-        navigationController?.popViewController(animated: true)
     }
     
     override func didReceiveMemoryWarning()

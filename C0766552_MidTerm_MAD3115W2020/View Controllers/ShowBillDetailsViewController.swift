@@ -67,7 +67,7 @@ extension ShowBillDetailsViewController : UITableViewDataSource, UITableViewDele
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let billCount = customer?.getBills().count else {
-            return 1;
+            return 1
         }
         return billCount;
     }
@@ -76,10 +76,8 @@ extension ShowBillDetailsViewController : UITableViewDataSource, UITableViewDele
         let cell = tableView.dequeueReusableCell(withIdentifier: "BillCell")
 
         if let bill = customer?.getBills()[indexPath.row]{
-            cell?.textLabel?.text = bill.billId
+            cell?.textLabel?.text = "Bill ID : \(bill.billId)"
         }
-
-        
             
         return cell!
     }
