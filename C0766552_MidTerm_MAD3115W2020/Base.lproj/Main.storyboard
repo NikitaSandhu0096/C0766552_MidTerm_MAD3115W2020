@@ -343,7 +343,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Agency Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EnL-Gg-Qva">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Agency Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EnL-Gg-Qva">
                                 <rect key="frame" x="20" y="282" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -371,6 +371,11 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="textField_Date" destination="1dD-xc-lND" id="CHz-Xi-zGS"/>
+                        <outlet property="txtAgencyName" destination="EnL-Gg-Qva" id="SVQ-f7-YGS"/>
+                        <outlet property="txtBillAmount" destination="Xr2-NK-b4v" id="XZi-Tc-57L"/>
+                        <outlet property="txtBillDate" destination="1dD-xc-lND" id="SKq-f1-wdv"/>
+                        <outlet property="txtBillID" destination="zvk-d5-LLP" id="8lY-zJ-FpX"/>
+                        <outlet property="txtUnitConsumed" destination="SIm-3M-jWE" id="Aeg-4i-6d1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J68-am-IOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

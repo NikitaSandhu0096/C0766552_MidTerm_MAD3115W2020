@@ -10,6 +10,12 @@ import UIKit
 
 class AddNewHydroBillViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var txtBillID: UITextField!
+    @IBOutlet weak var txtBillDate: UITextField!
+    @IBOutlet weak var txtBillAmount: UITextField!
+    @IBOutlet weak var txtAgencyName: UITextField!
+    @IBOutlet weak var txtUnitConsumed: UITextField!
+    
     @IBOutlet weak var textField_Date: UITextField!
     var datePicker : UIDatePicker!
     
