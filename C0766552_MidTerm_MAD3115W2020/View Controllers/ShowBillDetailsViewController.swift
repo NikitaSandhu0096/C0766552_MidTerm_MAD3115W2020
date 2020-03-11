@@ -10,6 +10,9 @@ import UIKit
 
 class ShowBillDetailsViewController: UIViewController {
 
+    @IBOutlet weak var tblBill: UITableView!
+//    var billNames : [Bill] = []
+    
     var customer : Customer?
 
     @IBOutlet weak var lblCustomerID: UILabel!
@@ -27,7 +30,6 @@ class ShowBillDetailsViewController: UIViewController {
         lblCustomerEmail.text = customer?.email
         
     }
-    
     
     @IBAction func bbAddNewBill(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Add new bill", message: "Select type of bill", preferredStyle: .actionSheet);
@@ -58,3 +60,27 @@ class ShowBillDetailsViewController: UIViewController {
     
 }
 
+extension ShowBillDetailsViewController : UITableViewDataSource, UITableViewDelegate{
+    func numberOfSections(in tableView: UITableView) -> Int{
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let billCount = customer?.getBills().count else {
+            return 1;
+        }
+        return billCount;
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BillCell")
+
+        if let bill = customer?.getBills()[indexPath.row]{
+            cell?.textLabel?.text = bill.billId
+        }
+
+        
+            
+        return cell!
+    }
+}

@@ -30,4 +30,7 @@ class Customer{
         bills.updateValue(bill, forKey: billId)
     }
 
+    func getBills() -> [Bill] {
+        return Array(self.bills.values)
+    }
 }

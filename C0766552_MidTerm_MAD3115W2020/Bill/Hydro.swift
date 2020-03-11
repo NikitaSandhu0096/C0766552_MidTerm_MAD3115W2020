@@ -10,12 +10,13 @@ import Foundation
 
 class Hydro : Bill{
     
+    var billType : String = "Hydro"
     var agencyName : String
     var unitConsumed : Int
     
-    init(billId: String, billDate: String, billType: type, agencyName : String, unitConsumed : Int) {
+    init(billId: String, billDate: String, agencyName : String, unitConsumed : Int) {
         self.agencyName = agencyName
         self.unitConsumed = unitConsumed
-        super.init(billId: billId, billDate: billDate, billType: billType)
+        super.init(billId: billId, billDate: billDate)
     }
 }
