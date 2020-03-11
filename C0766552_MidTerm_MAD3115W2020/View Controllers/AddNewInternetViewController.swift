@@ -25,7 +25,39 @@ class AddNewInternetViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func bAddBill(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+        if (((txtBillID.text == "" && txtBillDate.text == "") && (txtBillAmount.text == "" && txtProviderName.text == "")) && txtInternetUsage.text == ""){
+            let alertController = UIAlertController(title: "No new Internet Bill created", message:
+                "Enter all the required details to create new Internet Bill", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        } else if txtBillID.text == ""{
+            let alertController = UIAlertController(title: "No new Internet Bill created", message:
+                "Enter Bill ID", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtBillDate.text == ""{
+            let alertController = UIAlertController(title: "No new Internet Bill created", message:
+                "Enter Bill Date", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtBillAmount.text == ""{
+            let alertController = UIAlertController(title: "No new Internet Bill created", message:
+                "Enter Bill Amount", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtProviderName.text == ""{
+            let alertController = UIAlertController(title: "No new Internet Bill created", message:
+                "Enter Provider Name", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtInternetUsage.text == ""{
+            let alertController = UIAlertController(title: "No new Internet Bill created", message:
+                "Enter Internet Usage", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else{
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     override func didReceiveMemoryWarning()
