@@ -532,6 +532,11 @@
                     </view>
                     <connections>
                         <outlet property="textField_Date" destination="wMv-k6-Obo" id="yix-it-Gvt"/>
+                        <outlet property="txtBillAmount" destination="DWd-BL-Lvs" id="QqH-En-aU8"/>
+                        <outlet property="txtBillDate" destination="wMv-k6-Obo" id="Rlx-gH-Vcp"/>
+                        <outlet property="txtBillID" destination="2E2-I5-dF5" id="5qQ-Nv-BEc"/>
+                        <outlet property="txtInternetUsage" destination="dVK-gT-9v6" id="YeN-6Y-WYE"/>
+                        <outlet property="txtProviderName" destination="FEn-z3-pWA" id="peB-Xb-vCh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekY-7g-oea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

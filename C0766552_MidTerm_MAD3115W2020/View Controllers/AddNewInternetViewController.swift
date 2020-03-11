@@ -10,6 +10,12 @@ import UIKit
 
 class AddNewInternetViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var txtBillID: UITextField!
+    @IBOutlet weak var txtBillDate: UITextField!
+    @IBOutlet weak var txtBillAmount: UITextField!
+    @IBOutlet weak var txtProviderName: UITextField!
+    @IBOutlet weak var txtInternetUsage: UITextField!
+    
     @IBOutlet weak var textField_Date: UITextField!
     var datePicker : UIDatePicker!
         
