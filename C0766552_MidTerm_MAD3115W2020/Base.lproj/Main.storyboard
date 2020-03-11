@@ -459,6 +459,14 @@
                     </view>
                     <connections>
                         <outlet property="textField_Date" destination="gS8-3r-OCd" id="8p1-Xm-g0X"/>
+                        <outlet property="txtBillAmount" destination="VbO-Bi-kgr" id="Gpv-AF-Prc"/>
+                        <outlet property="txtBillDate" destination="gS8-3r-OCd" id="qLw-m7-WHJ"/>
+                        <outlet property="txtBillID" destination="WHS-nu-UqW" id="I6A-lC-oKh"/>
+                        <outlet property="txtInternetUsage" destination="6Y8-7t-ycP" id="wiG-ZJ-AkX"/>
+                        <outlet property="txtManufacturerName" destination="HXZ-qY-TqM" id="4OI-vd-HFI"/>
+                        <outlet property="txtMinutesUsage" destination="fDy-yM-z0J" id="7fF-rA-ENX"/>
+                        <outlet property="txtMobileNumber" destination="bLE-so-nd1" id="Iny-8P-hED"/>
+                        <outlet property="txtPlanName" destination="ZbD-C5-xDL" id="Mvv-Oh-wfO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8m-G6-vZT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

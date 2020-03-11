@@ -9,7 +9,16 @@
 import UIKit
 
 class AddNewMobileViewController: UIViewController, UITextFieldDelegate {
-
+    
+    @IBOutlet weak var txtBillID: UITextField!
+    @IBOutlet weak var txtBillDate: UITextField!
+    @IBOutlet weak var txtBillAmount: UITextField!
+    @IBOutlet weak var txtManufacturerName: UITextField!
+    @IBOutlet weak var txtPlanName: UITextField!
+    @IBOutlet weak var txtMobileNumber: UITextField!
+    @IBOutlet weak var txtInternetUsage: UITextField!
+    @IBOutlet weak var txtMinutesUsage: UITextField!
+    
     @IBOutlet weak var textField_Date: UITextField!
     var datePicker : UIDatePicker!
     
