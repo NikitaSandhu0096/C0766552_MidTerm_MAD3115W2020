@@ -28,7 +28,54 @@ class AddNewMobileViewController: UIViewController, UITextFieldDelegate {
     }
        
     @IBAction func bAddBill(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+        if (((txtBillID.text == "" && txtBillDate.text == "") && (txtBillAmount.text == "" && txtManufacturerName.text == "")) && ((txtPlanName.text == "" && txtMobileNumber.text == "") && (txtInternetUsage.text == "" && txtMinutesUsage.text == ""))){
+            let alertController = UIAlertController(title: "No new Mobile Bill created", message:
+                "Enter all the required details to create new Mobile Bill", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        } else if txtBillID.text == ""{
+            let alertController = UIAlertController(title: "No new Mobile Bill created", message:
+                "Enter Bill ID", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtBillDate.text == ""{
+            let alertController = UIAlertController(title: "No new Mobile Bill created", message:
+                "Enter Bill Date", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtBillAmount.text == ""{
+            let alertController = UIAlertController(title: "No new Mobile Bill created", message:
+                "Enter Bill Amount", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtManufacturerName.text == ""{
+            let alertController = UIAlertController(title: "No new Mobile Bill created", message:
+                "Enter Manufacturer Name", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtPlanName.text == ""{
+            let alertController = UIAlertController(title: "No new Mobile Bill created", message:
+                "Enter Plan Name", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtMobileNumber.text == ""{
+            let alertController = UIAlertController(title: "No new Mobile Bill created", message:
+                "Enter Mobile Number", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtInternetUsage.text == ""{
+            let alertController = UIAlertController(title: "No new Mobile Bill created", message:
+                "Enter Internet Usage", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else if txtMinutesUsage.text == ""{
+            let alertController = UIAlertController(title: "No new Mobile Bill created", message:
+                "Enter Minutes Usage", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }else{
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     override func didReceiveMemoryWarning()

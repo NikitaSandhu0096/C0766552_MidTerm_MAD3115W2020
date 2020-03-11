@@ -25,7 +25,7 @@ class AddNewHydroBillViewController: UIViewController, UITextFieldDelegate {
     }
    
     @IBAction func bAddBill(_ sender: UIButton) {
-        if (((txtBillID.text == "" && txtBillDate.text == "") && (txtBillAmount.text == "" && txtAgencyName.text == "")) && (txtUnitConsumed.text == "")){
+        if (((txtBillID.text == "" && txtBillDate.text == "") && (txtBillAmount.text == "" && txtAgencyName.text == "")) && txtUnitConsumed.text == ""){
             let alertController = UIAlertController(title: "No new Hydro Bill created", message:
                 "Enter all the required details to create new Hydro Bill", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
