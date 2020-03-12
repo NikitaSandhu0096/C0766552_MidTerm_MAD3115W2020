@@ -33,10 +33,10 @@ class ShowBillDetailsViewController: UIViewController {
         
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        billNames = DataStorage.getInstance().getAllBills()
-//        tblBill.reloadData()
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        billNames = DataStorage.getInstance().getAllBills()
+        tblBill.reloadData()
+    }
     
     @IBAction func bbAddNewBill(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Add new bill", message: "Select type of bill", preferredStyle: .actionSheet);
@@ -91,7 +91,7 @@ extension ShowBillDetailsViewController : UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        let c = DataStorage.getInstance().getAllBills()
+        let c = DataStorage.getInstance().getAllBills()
         let sc = customer?.getBills()[indexPath.row]
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let billInfoVC = sb.instantiateViewController(identifier: "billInfoVC") as! BillInfoViewController

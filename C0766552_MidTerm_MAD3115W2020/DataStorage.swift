@@ -11,7 +11,7 @@ import Foundation
 class DataStorage{
     private static let instance = DataStorage()
     private lazy var customerDictionary = [String : Customer]()
-//    private lazy var billDictionary = [String : Bill]()
+    private lazy var billDictionary = [String : Bill]()
     
     private init(){}
     
@@ -24,10 +24,10 @@ class DataStorage{
         self.customerDictionary.updateValue(customer, forKey: cid)
     }
     
-//    func addBillToCustomer(bill : Bill){
-//        let bid = bill.billId
-//        self.billDictionary.updateValue(bill, forKey: bid)
-//    }
+    func addBillToCustomer(bill : Bill){
+        let bid = bill.billId
+        self.billDictionary.updateValue(bill, forKey: bid)
+    }
     
     func loadCustomerDetails(){
 //        customerDictionary.updateValue(Customer(customerId: "C0001", firstName: "Nikita", lastName: "Sandhu", email: "nsandhu@gmail.com"), forKey: "C0001")
@@ -79,8 +79,8 @@ class DataStorage{
 //        return Array(customerDictionary.values)
     }
     
-//    func getAllBills() -> [Bill]{
-//        return Array(self.billDictionary.values)
-//    }
+    func getAllBills() -> [Bill]{
+        return Array(self.billDictionary.values)
+    }
     
 }

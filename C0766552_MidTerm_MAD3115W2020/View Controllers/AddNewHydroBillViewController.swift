@@ -21,10 +21,13 @@ class AddNewHydroBillViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let bbAddBill = UIBarButtonItem(title: "Add Bill", style: .plain, target: self, action: #selector(addBills))
+        navigationItem.rightBarButtonItem = bbAddBill
         textField_Date.delegate = self
     }
-   
-    @IBAction func bAddBill(_ sender: UIButton) {
+    
+    @objc func addBills(){
         if (((txtBillID.text == "" && txtBillDate.text == "") && (txtBillAmount.text == "" && txtAgencyName.text == "")) && txtUnitConsumed.text == ""){
             let alertController = UIAlertController(title: "No new Hydro Bill created", message:
                 "Enter all the required details to create new Hydro Bill", preferredStyle: .alert)
@@ -58,8 +61,44 @@ class AddNewHydroBillViewController: UIViewController, UITextFieldDelegate {
         }else{
             navigationController?.popViewController(animated: true)
         }
-        
     }
+   
+//    @IBAction func bAddBill(_ sender: UIButton) {
+//        if (((txtBillID.text == "" && txtBillDate.text == "") && (txtBillAmount.text == "" && txtAgencyName.text == "")) && txtUnitConsumed.text == ""){
+//            let alertController = UIAlertController(title: "No new Hydro Bill created", message:
+//                "Enter all the required details to create new Hydro Bill", preferredStyle: .alert)
+//            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+//            self.present(alertController, animated: true, completion: nil)
+//        } else if txtBillID.text == ""{
+//            let alertController = UIAlertController(title: "No new Hydro Bill created", message:
+//                "Enter Bill ID", preferredStyle: .alert)
+//            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+//            self.present(alertController, animated: true, completion: nil)
+//        }else if txtBillDate.text == ""{
+//            let alertController = UIAlertController(title: "No new Hydro Bill created", message:
+//                "Enter Bill Date", preferredStyle: .alert)
+//            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+//            self.present(alertController, animated: true, completion: nil)
+//        }else if txtBillAmount.text == ""{
+//            let alertController = UIAlertController(title: "No new Hydro Bill created", message:
+//                "Enter Bill Amount", preferredStyle: .alert)
+//            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+//            self.present(alertController, animated: true, completion: nil)
+//        }else if txtAgencyName.text == ""{
+//            let alertController = UIAlertController(title: "No new Hydro Bill created", message:
+//                "Enter Agency Name", preferredStyle: .alert)
+//            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+//            self.present(alertController, animated: true, completion: nil)
+//        }else if txtUnitConsumed.text == ""{
+//            let alertController = UIAlertController(title: "No new Hydro Bill created", message:
+//                "Enter Unit Consumed", preferredStyle: .alert)
+//            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+//            self.present(alertController, animated: true, completion: nil)
+//        }else{
+//            navigationController?.popViewController(animated: true)
+//        }
+//
+//    }
     
     override func didReceiveMemoryWarning()
     {
