@@ -28,7 +28,7 @@ extension Int{
     }
     
     func time() -> String {
-        let t = String.init(format: "%i minutets", self)
+        let t = String.init(format: "%i minutes", self)
         return t
     }
 }
@@ -37,20 +37,5 @@ extension Float{
     func currency() -> String{
         let c = String.init(format: "$%.2f", self)
         return c
-    }
-    
-    func currencyPerGB() -> String{
-        let p = String.init(format: "$%.2f/GB", self)
-        return p
-    }
-    
-    func currencyPerUnit() -> String {
-        let u = String.init(format: "$%.2f/Unit", self)
-        return u
-    }
-    
-    func currencyPerMin() -> String {
-        let m = String.init(format: "$%.2f/minute", self)
-        return m
     }
 }
