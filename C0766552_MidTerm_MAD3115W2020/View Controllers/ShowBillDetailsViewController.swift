@@ -83,7 +83,7 @@ extension ShowBillDetailsViewController : UITableViewDataSource, UITableViewDele
         let cell = tableView.dequeueReusableCell(withIdentifier: "BillCell")
 
         if let bill = customer?.getBills()[indexPath.row]{
-            cell?.textLabel?.text = "\(bill.billType)      \(bill.billDate)      \(bill.totalBillAmount)"
+            cell?.textLabel?.text = "\(bill.billType)      \(bill.billDate)      \(bill.totalBillAmount.currency())"
         }
             
         return cell!
