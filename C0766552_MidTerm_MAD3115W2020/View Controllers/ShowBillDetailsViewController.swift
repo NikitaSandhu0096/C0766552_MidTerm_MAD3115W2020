@@ -20,6 +20,7 @@ class ShowBillDetailsViewController: UIViewController {
     @IBOutlet weak var lblCustomerLastName: UILabel!
     @IBOutlet weak var lblCustomerFullName: UILabel!
     @IBOutlet weak var lblCustomerEmail: UILabel!
+    @IBOutlet weak var lblTotalBill: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class ShowBillDetailsViewController: UIViewController {
         lblCustomerLastName.text = customer?.lastName
         lblCustomerFullName.text = customer?.fullName
         lblCustomerEmail.text = customer?.email
+        lblTotalBill.text = "Total Amount to Pay  :    \(String(describing: customer!.totalAmountToPay.currency()))"
         
     }
     
