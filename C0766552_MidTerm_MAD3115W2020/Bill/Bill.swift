@@ -19,9 +19,9 @@ class Bill {
     var billId : String
     var billDate : String
     var billType : String
-    var totalBillAmount : String
+    var totalBillAmount : Float
     
-    init(billId : String, billDate : String, billType : String, totalBillAmount : String) {
+    init(billId : String, billDate : String, billType : String, totalBillAmount : Float) {
         self.billId = billId
         self.billDate = billDate
         self.billType = billType

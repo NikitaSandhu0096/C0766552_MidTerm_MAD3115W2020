@@ -11,9 +11,9 @@ import UIKit
 class BillInfoViewController: UIViewController {
     
     var bill : Bill?
-    var internet : Internet?
-    var hydro : Hydro?
-    var mobile : Mobile?
+//    var internet : Internet?
+//    var hydro : Hydro?
+//    var mobile : Mobile?
 
     @IBOutlet weak var lbl1: UILabel!
     @IBOutlet weak var lbl2: UILabel!
@@ -36,33 +36,36 @@ class BillInfoViewController: UIViewController {
     func display(){
         if bill?.billType == "Internet"{
             lbl10.text = "Internet Bill Information"
-            lbl1.text = internet?.billId
-            lbl2.text = internet?.billDate
-            lbl3.text = internet?.billType
-            lbl4.text = internet?.totalBillAmount
-            lbl5.text = internet?.providerName
-            lbl6.text = internet?.internetGBUsed
+            let internet = bill as! Internet;
+            lbl1.text = "Bill ID : \(internet.billId)"
+            lbl2.text = "Bill Date : \(internet.billDate)"
+            lbl3.text = "Bill Type : \(internet.billType)"
+            lbl4.text = "Bill Amount : \(internet.totalBillAmount)";
+            lbl5.text = "Provider Name : \(internet.providerName)"
+            lbl6.text = "Internet GB used : \(internet.internetGBUsed)"
         }
         else if bill?.billType == "Mobile"{
             lbl10.text = "Mobile Bill Information"
-            lbl1.text = mobile?.billId
-            lbl2.text = mobile?.billDate
-            lbl3.text = mobile?.billType
-            lbl4.text = mobile?.totalBillAmount
-            lbl5.text = mobile?.mobileManufacturerName
-            lbl6.text = mobile?.planName
-            lbl7.text = mobile?.mobileNumber
-            lbl8.text = mobile?.internetGBUsed
-            lbl9.text = mobile?.minuteUsed
+            let mobile =  bill as! Mobile;
+            lbl1.text = "Bill ID : \(mobile.billId)"
+            lbl2.text = "Bill Date : \(mobile.billDate)"
+            lbl3.text = "Bill Type : \(mobile.billType)"
+            lbl4.text = "Bill Amount : \(mobile.totalBillAmount)"
+            lbl5.text = "Manufacturer Name : \(mobile.mobileManufacturerName)"
+            lbl6.text = "Plan Name : \(mobile.planName)"
+            lbl7.text = "Mobile Number : \(mobile.mobileNumber)"
+            lbl8.text = "Internet GB used : \(mobile.internetGBUsed)"
+            lbl9.text = "Minutes Used : \(mobile.minuteUsed)"
         }
         else{
             lbl10.text = "Hydro Bill Information"
-            lbl1.text = hydro?.billId
-            lbl2.text = hydro?.billDate
-            lbl3.text = hydro?.billType
-            lbl4.text = hydro?.totalBillAmount
-            lbl5.text = hydro?.agencyName
-            lbl6.text = hydro?.unitConsumed
+            let hydro = bill as! Hydro;
+            lbl1.text = "Bill ID : \(hydro.billId)"
+            lbl2.text = "Bill Date : \(hydro.billDate)"
+            lbl3.text = "Bill Type : \(hydro.billType)"
+            lbl4.text = "Bill Amount : \(hydro.totalBillAmount)"
+            lbl5.text = "Agency Name : \(hydro.agencyName)"
+            lbl6.text = "Units Consumed : \(hydro.unitConsumed)"
         }
     }
 
