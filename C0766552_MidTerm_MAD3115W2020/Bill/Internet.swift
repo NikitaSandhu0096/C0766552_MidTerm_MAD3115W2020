@@ -10,13 +10,12 @@ import Foundation
 
 class Internet : Bill{
     
-    var billType : String = "Internet"
     var providerName : String
     var internetGBUsed : Int
 
     init(billId: String, billDate: String, providerName : String, internetGBUsed : Int) {
         self.providerName = providerName
         self.internetGBUsed = internetGBUsed
-        super.init(billId: billId, billDate: billDate)
+        super.init(billId: billId, billDate: billDate, billType: "Internet")
     }
 }

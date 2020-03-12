@@ -18,12 +18,12 @@ class Bill {
     
     var billId : String
     var billDate : String
-//    var billType : type
+    var billType : String
     var totalBillAmount : Float = 0.0
     
-    init(billId : String, billDate : String) {
+    init(billId : String, billDate : String, billType : String) {
         self.billId = billId
         self.billDate = billDate
-//        self.billType = billType
+        self.billType = billType
     }
 }

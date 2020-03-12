@@ -76,7 +76,7 @@ extension ShowBillDetailsViewController : UITableViewDataSource, UITableViewDele
         let cell = tableView.dequeueReusableCell(withIdentifier: "BillCell")
 
         if let bill = customer?.getBills()[indexPath.row]{
-            cell?.textLabel?.text = "Bill ID : \(bill.billId)"
+            cell?.textLabel?.text = "Bill Type : \(bill.billType)"
         }
             
         return cell!

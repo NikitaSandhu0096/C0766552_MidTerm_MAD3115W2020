@@ -10,7 +10,7 @@ import Foundation
 
 class Mobile : Bill{
     
-    var billType : String = "Mobile"
+//    var billType : String = "Mobile"
     var mobileManufacturerName : String
     var planName : String
     var mobileNumber : String
@@ -23,6 +23,6 @@ class Mobile : Bill{
         self.mobileNumber = mobileNumber
         self.internetGBUsed = internetGBUsed
         self.minuteUsed = minuteUsed
-        super.init(billId: billId, billDate: billDate)
+        super.init(billId: billId, billDate: billDate, billType: "Mobile")
     }
 }
