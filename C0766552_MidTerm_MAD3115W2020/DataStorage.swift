@@ -11,6 +11,7 @@ import Foundation
 class DataStorage{
     private static let instance = DataStorage()
     private lazy var customerDictionary = [String : Customer]()
+    private lazy var billDictionary = [String : Bill]()
     
     private init(){}
     
@@ -21,6 +22,11 @@ class DataStorage{
     func addCustomer(customer : Customer){
         let cid = customer.customerId
         self.customerDictionary.updateValue(customer, forKey: cid)
+    }
+    
+    func addBillToCustomer(bill : Bill){
+        let bid = bill.billId
+        self.billDictionary.updateValue(bill, forKey: bid)
     }
     
     func loadCustomerDetails(){
