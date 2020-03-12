@@ -12,11 +12,11 @@ class Hydro : Bill{
     
 //    var billType : String = "Hydro"
     var agencyName : String
-    var unitConsumed : Int
+    var unitConsumed : String
     
-    init(billId: String, billDate: String, agencyName : String, unitConsumed : Int) {
+    init(billId: String, billDate: String, totalBillAmount: String, agencyName : String, unitConsumed : String) {
         self.agencyName = agencyName
         self.unitConsumed = unitConsumed
-        super.init(billId: billId, billDate: billDate, billType: "Hydro")
+        super.init(billId: billId, billDate: billDate, billType: "Hydro", totalBillAmount: totalBillAmount)
     }
 }
