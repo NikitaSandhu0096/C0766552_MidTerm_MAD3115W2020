@@ -48,7 +48,7 @@ class DataStorage{
 
         let h2 = Hydro(billId: "HYDB0002", billDate: "Sep 15, 2018", totalBillAmount: 1250.00, agencyName: "Bruce Power", unitConsumed: 500)
 
-        let m1 = Mobile(billId: "MOBB0001", billDate: "Jun 06, 2019", totalBillAmount: 187.60, mobileManufacturerName: "Apple Inc.", planName: "LTE+3G 9.5GB Promo Plan", mobileNumber: "9753124680", internetGBUsed: 4, minuteUsed: 230)
+        let m1 = Mobile(billId: "MOBB0001", billDate: "Jun 06, 2019", totalBillAmount: 187.60, mobileManufacturerName: "Apple Inc.", planName: "LTE+3G 9.5GB Promo", mobileNumber: "9753124680", internetGBUsed: 4, minuteUsed: 230)
         
         c1.addBill(bill: i1, billId: i1.billId)
         c1.addBill(bill: h1, billId: h1.billId)
