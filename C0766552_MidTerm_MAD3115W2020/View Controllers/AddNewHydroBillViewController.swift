@@ -9,7 +9,9 @@
 import UIKit
 
 class AddNewHydroBillViewController: UIViewController, UITextFieldDelegate {
-
+    
+    var customer:Customer?;
+    
     @IBOutlet weak var txtBillID: UITextField!
 //    @IBOutlet weak var txtBillDate: UITextField!
     @IBOutlet weak var txtBillAmount: UITextField!
@@ -60,7 +62,11 @@ class AddNewHydroBillViewController: UIViewController, UITextFieldDelegate {
             self.present(alertController, animated: true, completion: nil)
         }else{
 //            DataStorage.getInstance().addBillToCustomer(bill: Hydro(billId: txtBillID.text ?? "", billDate: textField_Date.text ?? "", totalBillAmount: Float(txtBillAmount.text ?? "")!, agencyName: txtAgencyName.text ?? "", unitConsumed: Int(txtUnitConsumed.text ?? "")!))
-//            
+//
+            
+            let tempObj = Hydro(billId: txtBillID.text ?? "", billDate: textField_Date.text ?? "", totalBillAmount: Float(txtBillAmount.text ?? "")!, agencyName: txtAgencyName.text ?? "", unitConsumed: Int(txtUnitConsumed.text ?? "")!);
+            
+            customer?.addBill(bill: tempObj, billId: tempObj.billId);
             
             navigationController?.popViewController(animated: true)
         }

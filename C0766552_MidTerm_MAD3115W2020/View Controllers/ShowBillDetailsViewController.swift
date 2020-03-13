@@ -33,10 +33,11 @@ class ShowBillDetailsViewController: UIViewController {
         
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        billNames = DataStorage.getInstance().getAllBills()
-//        tblBill.reloadData()
-//    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tblBill.reloadData()
+    }
     
     @IBAction func bbAddNewBill(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Add new bill", message: "Select type of bill", preferredStyle: .actionSheet);
@@ -44,6 +45,7 @@ class ShowBillDetailsViewController: UIViewController {
             
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let addNewHydroBillVC = sb.instantiateViewController(identifier: "addNewHydroBillVC") as! AddNewHydroBillViewController
+            addNewHydroBillVC.customer = self.customer;
             self.navigationController?.pushViewController(addNewHydroBillVC, animated: true)
             
         }));
