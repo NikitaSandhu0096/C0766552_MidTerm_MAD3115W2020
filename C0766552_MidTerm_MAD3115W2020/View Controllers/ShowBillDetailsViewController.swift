@@ -85,13 +85,20 @@ extension ShowBillDetailsViewController : UITableViewDataSource, UITableViewDele
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BillCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BillCell") as! BillCellTableViewCell
 
         if let bill = customer?.getBills()[indexPath.row]{
-            cell?.textLabel?.text = "\(bill.billType)       \(bill.evaluateDate(string: bill.billDate))        \(bill.totalBillAmount.currency())"
+//            cell?.textLabel?.text = "\(bill.billType)       \(bill.evaluateDate(string: bill.billDate))        \(bill.totalBillAmount.currency())"
+            cell.lblBillType.text = "Bill Type      : \(bill.billType)"
+            cell.lblBillDate.text = "Bill Date      : \(bill.evaluateDate(string: bill.billDate))"
+            cell.lblBillAmount.text = "Bill Amount : \(bill.totalBillAmount.currency())"
         }
             
-        return cell!
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(100.0)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
