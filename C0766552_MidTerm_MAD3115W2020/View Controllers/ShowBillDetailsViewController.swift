@@ -46,7 +46,7 @@ class ShowBillDetailsViewController: UIViewController {
             
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let addNewHydroBillVC = sb.instantiateViewController(identifier: "addNewHydroBillVC") as! AddNewHydroBillViewController
-            addNewHydroBillVC.customer = self.customer;
+            addNewHydroBillVC.customer = self.customer
             self.navigationController?.pushViewController(addNewHydroBillVC, animated: true)
             
         }));
@@ -54,6 +54,7 @@ class ShowBillDetailsViewController: UIViewController {
             
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let addNewMobileBillVC = sb.instantiateViewController(identifier: "addNewMobileBillVC") as! AddNewMobileViewController
+            addNewMobileBillVC.customer = self.customer
             self.navigationController?.pushViewController(addNewMobileBillVC, animated: true)
             
         }));
@@ -61,6 +62,7 @@ class ShowBillDetailsViewController: UIViewController {
             
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let addNewInternetBillVC = sb.instantiateViewController(identifier: "addNewInternetBillVC") as! AddNewInternetViewController
+            addNewInternetBillVC.customer = self.customer
             self.navigationController?.pushViewController(addNewInternetBillVC, animated: true)
             
         }));
