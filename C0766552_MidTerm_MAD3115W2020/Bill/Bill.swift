@@ -34,7 +34,7 @@ class Bill {
         dateformatGet.dateFormat = "MMM d, yyyy"
 
         let dateformatSet = DateFormatter()
-        dateformatSet.dateFormat = "EEE, d MMM, yyyy"
+        dateformatSet.dateFormat = "EEEE, d MMMM, yyyy"
 
         let date : Date? = dateformatGet.date(from: billDate)
         return dateformatSet.string(from: date!)

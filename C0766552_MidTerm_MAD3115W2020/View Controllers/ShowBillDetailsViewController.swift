@@ -89,9 +89,9 @@ extension ShowBillDetailsViewController : UITableViewDataSource, UITableViewDele
 
         if let bill = customer?.getBills()[indexPath.row]{
 //            cell?.textLabel?.text = "\(bill.billType)       \(bill.evaluateDate(string: bill.billDate))        \(bill.totalBillAmount.currency())"
-            cell.lblBillType.text = "Bill Type      : \(bill.billType)"
-            cell.lblBillDate.text = "Bill Date      : \(bill.evaluateDate(string: bill.billDate))"
-            cell.lblBillAmount.text = "Bill Amount : \(bill.totalBillAmount.currency())"
+            cell.lblBillType.text = "Bill Type      :   \(bill.billType)"
+            cell.lblBillDate.text = "Bill Date      :   \(bill.evaluateDate(string: bill.billDate))"
+            cell.lblBillAmount.text = "Bill Amount :   \(bill.totalBillAmount.currency())"
         }
             
         return cell

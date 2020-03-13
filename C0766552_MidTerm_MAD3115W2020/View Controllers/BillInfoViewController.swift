@@ -36,7 +36,7 @@ class BillInfoViewController: UIViewController {
             lbl10.text = "Internet Bill Information"
             let internet = bill as! Internet
             lbl1.text = "Bill ID                    :   \(internet.billId)"
-            lbl2.text = "Bill Date                :   \(internet.billDate)"
+            lbl2.text = "Bill Date                :   \(bill!.evaluateDate(string: "\(internet.billDate)"))"
             lbl3.text = "Bill Type                :   \(internet.billType)"
             lbl4.text = "Bill Amount           :   \(internet.totalBillAmount.currency())";
             lbl5.text = "Provider Name     :   \(internet.providerName)"
@@ -46,7 +46,7 @@ class BillInfoViewController: UIViewController {
             lbl10.text = "Mobile Bill Information"
             let mobile = bill as! Mobile
             lbl1.text = "Bill ID                          :   \(mobile.billId)"
-            lbl2.text = "Bill Date                     :   \(mobile.billDate)"
+            lbl2.text = "Bill Date                     :   \(bill!.evaluateDate(string: "\(mobile.billDate)"))"
             lbl3.text = "Bill Type                     :   \(mobile.billType)"
             lbl4.text = "Bill Amount                :   \(mobile.totalBillAmount.currency())"
             lbl5.text = "Manufacturer Name :   \(mobile.mobileManufacturerName)"
@@ -59,7 +59,7 @@ class BillInfoViewController: UIViewController {
             lbl10.text = "Hydro Bill Information"
             let hydro = bill as! Hydro
             lbl1.text = "Bill ID                     :   \(hydro.billId)"
-            lbl2.text = "Bill Date                :   \(hydro.billDate)"
+            lbl2.text = "Bill Date                :   \(bill!.evaluateDate(string: "\(hydro.billDate)"))"
             lbl3.text = "Bill Type                :   \(hydro.billType)"
             lbl4.text = "Bill Amount           :   \(hydro.totalBillAmount.currency())"
             lbl5.text = "Agency Name       :   \(hydro.agencyName)"
