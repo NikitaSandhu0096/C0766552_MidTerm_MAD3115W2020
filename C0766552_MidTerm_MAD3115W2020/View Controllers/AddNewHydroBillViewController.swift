@@ -11,7 +11,7 @@ import UIKit
 class AddNewHydroBillViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var txtBillID: UITextField!
-    @IBOutlet weak var txtBillDate: UITextField!
+//    @IBOutlet weak var txtBillDate: UITextField!
     @IBOutlet weak var txtBillAmount: UITextField!
     @IBOutlet weak var txtAgencyName: UITextField!
     @IBOutlet weak var txtUnitConsumed: UITextField!
@@ -28,7 +28,7 @@ class AddNewHydroBillViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func addBills(){
-        if (((txtBillID.text == "" && txtBillDate.text == "") && (txtBillAmount.text == "" && txtAgencyName.text == "")) && txtUnitConsumed.text == ""){
+        if (((txtBillID.text == "" && textField_Date.text == "") && (txtBillAmount.text == "" && txtAgencyName.text == "")) && txtUnitConsumed.text == ""){
             let alertController = UIAlertController(title: "No new Hydro Bill created", message:
                 "Enter all the required details to create new Hydro Bill", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
@@ -38,7 +38,7 @@ class AddNewHydroBillViewController: UIViewController, UITextFieldDelegate {
                 "Enter Bill ID", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
-        }else if txtBillDate.text == ""{
+        }else if textField_Date.text == ""{
             let alertController = UIAlertController(title: "No new Hydro Bill created", message:
                 "Enter Bill Date", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
@@ -59,6 +59,9 @@ class AddNewHydroBillViewController: UIViewController, UITextFieldDelegate {
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }else{
+//            DataStorage.getInstance().addBillToCustomer(bill: Hydro(billId: txtBillID.text ?? "", billDate: textField_Date.text ?? "", totalBillAmount: Float(txtBillAmount.text ?? "")!, agencyName: txtAgencyName.text ?? "", unitConsumed: Int(txtUnitConsumed.text ?? "")!))
+//            
+            
             navigationController?.popViewController(animated: true)
         }
     }

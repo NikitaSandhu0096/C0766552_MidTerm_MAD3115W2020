@@ -11,7 +11,7 @@ import UIKit
 class AddNewInternetViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var txtBillID: UITextField!
-    @IBOutlet weak var txtBillDate: UITextField!
+//    @IBOutlet weak var txtBillDate: UITextField!
     @IBOutlet weak var txtBillAmount: UITextField!
     @IBOutlet weak var txtProviderName: UITextField!
     @IBOutlet weak var txtInternetUsage: UITextField!
@@ -27,7 +27,7 @@ class AddNewInternetViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func addBills(){
-            if (((txtBillID.text == "" && txtBillDate.text == "") && (txtBillAmount.text == "" && txtProviderName.text == "")) && txtInternetUsage.text == ""){
+            if (((txtBillID.text == "" && textField_Date.text == "") && (txtBillAmount.text == "" && txtProviderName.text == "")) && txtInternetUsage.text == ""){
                 let alertController = UIAlertController(title: "No new Internet Bill created", message:
                     "Enter all the required details to create new Internet Bill", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default))
@@ -37,7 +37,7 @@ class AddNewInternetViewController: UIViewController, UITextFieldDelegate {
                     "Enter Bill ID", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alertController, animated: true, completion: nil)
-            }else if txtBillDate.text == ""{
+            }else if textField_Date.text == ""{
                 let alertController = UIAlertController(title: "No new Internet Bill created", message:
                     "Enter Bill Date", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default))

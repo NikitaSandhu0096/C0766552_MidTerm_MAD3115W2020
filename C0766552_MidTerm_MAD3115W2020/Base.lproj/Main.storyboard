@@ -472,7 +472,6 @@
                         <outlet property="textField_Date" destination="1dD-xc-lND" id="CHz-Xi-zGS"/>
                         <outlet property="txtAgencyName" destination="EnL-Gg-Qva" id="SVQ-f7-YGS"/>
                         <outlet property="txtBillAmount" destination="Xr2-NK-b4v" id="XZi-Tc-57L"/>
-                        <outlet property="txtBillDate" destination="1dD-xc-lND" id="SKq-f1-wdv"/>
                         <outlet property="txtBillID" destination="zvk-d5-LLP" id="8lY-zJ-FpX"/>
                         <outlet property="txtUnitConsumed" destination="SIm-3M-jWE" id="Aeg-4i-6d1"/>
                     </connections>
@@ -551,7 +550,6 @@
                     <connections>
                         <outlet property="textField_Date" destination="gS8-3r-OCd" id="8p1-Xm-g0X"/>
                         <outlet property="txtBillAmount" destination="VbO-Bi-kgr" id="Gpv-AF-Prc"/>
-                        <outlet property="txtBillDate" destination="gS8-3r-OCd" id="qLw-m7-WHJ"/>
                         <outlet property="txtBillID" destination="WHS-nu-UqW" id="I6A-lC-oKh"/>
                         <outlet property="txtInternetUsage" destination="6Y8-7t-ycP" id="wiG-ZJ-AkX"/>
                         <outlet property="txtManufacturerName" destination="HXZ-qY-TqM" id="4OI-vd-HFI"/>
@@ -616,7 +614,6 @@
                     <connections>
                         <outlet property="textField_Date" destination="wMv-k6-Obo" id="yix-it-Gvt"/>
                         <outlet property="txtBillAmount" destination="DWd-BL-Lvs" id="QqH-En-aU8"/>
-                        <outlet property="txtBillDate" destination="wMv-k6-Obo" id="Rlx-gH-Vcp"/>
                         <outlet property="txtBillID" destination="2E2-I5-dF5" id="5qQ-Nv-BEc"/>
                         <outlet property="txtInternetUsage" destination="dVK-gT-9v6" id="YeN-6Y-WYE"/>
                         <outlet property="txtProviderName" destination="FEn-z3-pWA" id="peB-Xb-vCh"/>

@@ -11,7 +11,7 @@ import UIKit
 class AddNewMobileViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var txtBillID: UITextField!
-    @IBOutlet weak var txtBillDate: UITextField!
+//    @IBOutlet weak var txtBillDate: UITextField!
     @IBOutlet weak var txtBillAmount: UITextField!
     @IBOutlet weak var txtManufacturerName: UITextField!
     @IBOutlet weak var txtPlanName: UITextField!
@@ -30,7 +30,7 @@ class AddNewMobileViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func addBills(){
-         if (((txtBillID.text == "" && txtBillDate.text == "") && (txtBillAmount.text == "" && txtManufacturerName.text == "")) && ((txtPlanName.text == "" && txtMobileNumber.text == "") && (txtInternetUsage.text == "" && txtMinutesUsage.text == ""))){
+         if (((txtBillID.text == "" && textField_Date.text == "") && (txtBillAmount.text == "" && txtManufacturerName.text == "")) && ((txtPlanName.text == "" && txtMobileNumber.text == "") && (txtInternetUsage.text == "" && txtMinutesUsage.text == ""))){
                    let alertController = UIAlertController(title: "No new Mobile Bill created", message:
                        "Enter all the required details to create new Mobile Bill", preferredStyle: .alert)
                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
@@ -40,7 +40,7 @@ class AddNewMobileViewController: UIViewController, UITextFieldDelegate {
                        "Enter Bill ID", preferredStyle: .alert)
                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
                    self.present(alertController, animated: true, completion: nil)
-               }else if txtBillDate.text == ""{
+               }else if textField_Date.text == ""{
                    let alertController = UIAlertController(title: "No new Mobile Bill created", message:
                        "Enter Bill Date", preferredStyle: .alert)
                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
