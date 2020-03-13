@@ -35,12 +35,12 @@ class BillInfoViewController: UIViewController {
         if bill?.billType == "Internet"{
             lbl10.text = "Internet Bill Information"
             let internet = bill as! Internet
-            lbl1.text = "Bill ID                    :   \(internet.billId)"
+            lbl1.text = "Bill ID                     :   \(internet.billId)"
             lbl2.text = "Bill Date                :   \(bill!.evaluateDate(string: "\(internet.billDate)"))"
             lbl3.text = "Bill Type                :   \(internet.billType)"
             lbl4.text = "Bill Amount           :   \(internet.totalBillAmount.currency())";
             lbl5.text = "Provider Name     :   \(internet.providerName)"
-            lbl6.text = "Internet GB used :   \(internet.internetGBUsed.dataUsed())"
+            lbl6.text = "Internet GB used  :   \(internet.internetGBUsed.dataUsed())"
         }
         else if bill?.billType == "Mobile"{
             lbl10.text = "Mobile Bill Information"
@@ -59,10 +59,10 @@ class BillInfoViewController: UIViewController {
             lbl10.text = "Hydro Bill Information"
             let hydro = bill as! Hydro
             lbl1.text = "Bill ID                     :   \(hydro.billId)"
-            lbl2.text = "Bill Date                :   \(bill!.evaluateDate(string: "\(hydro.billDate)"))"
+            lbl2.text = "Bill Date                 :   \(bill!.evaluateDate(string: "\(hydro.billDate)"))"
             lbl3.text = "Bill Type                :   \(hydro.billType)"
             lbl4.text = "Bill Amount           :   \(hydro.totalBillAmount.currency())"
-            lbl5.text = "Agency Name       :   \(hydro.agencyName)"
+            lbl5.text = "Agency Name      :   \(hydro.agencyName)"
             lbl6.text = "Units Consumed  :   \(hydro.unitConsumed)"
         }
     }

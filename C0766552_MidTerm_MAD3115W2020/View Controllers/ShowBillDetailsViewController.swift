@@ -29,14 +29,14 @@ class ShowBillDetailsViewController: UIViewController {
         lblCustomerLastName.text = customer?.lastName
         lblCustomerFullName.text = customer?.fullName
         lblCustomerEmail.text = customer?.email
-        lblTotalBill.text = "Total Amount to Pay  :    \(String(describing: customer!.totalAmountToPay.currency()))"
+        lblTotalBill.text = "Total Amount to Pay    :    \(String(describing: customer!.totalAmountToPay.currency()))"
         
     }
     
     
     
     override func viewWillAppear(_ animated: Bool) {
-        lblTotalBill.text = "Total Amount to Pay  :    \(String(describing: customer!.totalAmountToPay.currency()))"
+        lblTotalBill.text = "Total Amount to Pay    :    \(String(describing: customer!.totalAmountToPay.currency()))"
         tblBill.reloadData()
     }
     
