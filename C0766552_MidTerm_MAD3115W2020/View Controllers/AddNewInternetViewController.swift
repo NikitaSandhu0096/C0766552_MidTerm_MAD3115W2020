@@ -61,9 +61,9 @@ class AddNewInternetViewController: UIViewController, UITextFieldDelegate {
                 self.present(alertController, animated: true, completion: nil)
             }else{
                 
-                let tempObj = Internet(billId: txtBillID.text ?? "", billDate: textField_Date.text ?? "", totalBillAmount: Float(txtBillAmount.text ?? "")!, providerName: txtProviderName.text ?? "", internetGBUsed: Int(txtInternetUsage.text ?? "")!)
+                let tempObj3 = Internet(billId: txtBillID.text ?? "", billDate: textField_Date.text ?? "", totalBillAmount: Float(txtBillAmount.text ?? "")!, providerName: txtProviderName.text ?? "", internetGBUsed: Int(txtInternetUsage.text ?? "")!)
                 
-                customer?.addBill(bill: tempObj, billId: tempObj.billId)
+                customer?.addBill(bill: tempObj3, billId: tempObj3.billId)
                 
                 navigationController?.popViewController(animated: true)
             }

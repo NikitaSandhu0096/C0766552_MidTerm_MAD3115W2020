@@ -78,11 +78,18 @@ class AddNewMobileViewController: UIViewController, UITextFieldDelegate {
                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
                    self.present(alertController, animated: true, completion: nil)
                }else{
-                    let tempObj = Mobile(billId: txtBillID.text ?? "", billDate: textField_Date.text ?? "", totalBillAmount: Float(txtBillAmount.text ?? "")!, mobileManufacturerName: txtManufacturerName.text ?? "", planName: txtPlanName.text ?? "", mobileNumber: txtMobileNumber.text ?? "", internetGBUsed: Int(txtInternetUsage.text ?? "")!, minuteUsed: Int(txtMinutesUsage.text ?? "")!)
+            if txtMobileNumber.text?.mobileValid() == true {
+                    let tempObj2 = Mobile(billId: txtBillID.text ?? "", billDate: textField_Date.text ?? "", totalBillAmount: Float(txtBillAmount.text ?? "")!, mobileManufacturerName: txtManufacturerName.text ?? "", planName: txtPlanName.text ?? "", mobileNumber: txtMobileNumber.text ?? "", internetGBUsed: Int(txtInternetUsage.text ?? "")!, minuteUsed: Int(txtMinutesUsage.text ?? "")!)
             
-                    customer?.addBill(bill: tempObj, billId: tempObj.billId)
+                    customer?.addBill(bill: tempObj2, billId: tempObj2.billId)
                    navigationController?.popViewController(animated: true)
-               }
+            } else{
+                let alertController = UIAlertController(title: "No New Mobile Bill created", message:
+                    "Enter valid Mobile Number", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
     }
        
 //    @IBAction func bAddBill(_ sender: UIButton) {
@@ -185,4 +192,3 @@ class AddNewMobileViewController: UIViewController, UITextFieldDelegate {
         textField_Date.resignFirstResponder()
     }
 }
-

@@ -36,6 +36,7 @@ class ShowBillDetailsViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
+        lblTotalBill.text = "Total Amount to Pay  :    \(String(describing: customer!.totalAmountToPay.currency()))"
         tblBill.reloadData()
     }
     

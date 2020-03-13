@@ -64,9 +64,9 @@ class AddNewHydroBillViewController: UIViewController, UITextFieldDelegate {
 //            DataStorage.getInstance().addBillToCustomer(bill: Hydro(billId: txtBillID.text ?? "", billDate: textField_Date.text ?? "", totalBillAmount: Float(txtBillAmount.text ?? "")!, agencyName: txtAgencyName.text ?? "", unitConsumed: Int(txtUnitConsumed.text ?? "")!))
 //
             
-            let tempObj = Hydro(billId: txtBillID.text ?? "", billDate: textField_Date.text ?? "", totalBillAmount: Float(txtBillAmount.text ?? "")!, agencyName: txtAgencyName.text ?? "", unitConsumed: Int(txtUnitConsumed.text ?? "")!)
+            let tempObj1 = Hydro(billId: txtBillID.text ?? "", billDate: textField_Date.text ?? "", totalBillAmount: Float(txtBillAmount.text ?? "")!, agencyName: txtAgencyName.text ?? "", unitConsumed: Int(txtUnitConsumed.text ?? "")!)
             
-            customer?.addBill(bill: tempObj, billId: tempObj.billId)
+            customer?.addBill(bill: tempObj1, billId: tempObj1.billId)
             
             navigationController?.popViewController(animated: true)
         }
