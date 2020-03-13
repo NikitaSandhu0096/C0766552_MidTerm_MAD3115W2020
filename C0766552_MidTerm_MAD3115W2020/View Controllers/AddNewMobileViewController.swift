@@ -10,6 +10,8 @@ import UIKit
 
 class AddNewMobileViewController: UIViewController, UITextFieldDelegate {
     
+    var customer:Customer?
+    
     @IBOutlet weak var txtBillID: UITextField!
 //    @IBOutlet weak var txtBillDate: UITextField!
     @IBOutlet weak var txtBillAmount: UITextField!
@@ -76,6 +78,9 @@ class AddNewMobileViewController: UIViewController, UITextFieldDelegate {
                    alertController.addAction(UIAlertAction(title: "OK", style: .default))
                    self.present(alertController, animated: true, completion: nil)
                }else{
+                    let tempObj = Mobile(billId: txtBillID.text ?? "", billDate: textField_Date.text ?? "", totalBillAmount: Float(txtBillAmount.text ?? "")!, mobileManufacturerName: txtManufacturerName.text ?? "", planName: txtPlanName.text ?? "", mobileNumber: txtMobileNumber.text ?? "", internetGBUsed: Int(txtInternetUsage.text ?? "")!, minuteUsed: Int(txtMinutesUsage.text ?? "")!)
+            
+                    customer?.addBill(bill: tempObj, billId: tempObj.billId)
                    navigationController?.popViewController(animated: true)
                }
     }

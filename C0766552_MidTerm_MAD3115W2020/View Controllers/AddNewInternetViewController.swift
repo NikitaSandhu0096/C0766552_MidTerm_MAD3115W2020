@@ -10,6 +10,8 @@ import UIKit
 
 class AddNewInternetViewController: UIViewController, UITextFieldDelegate {
     
+    var customer:Customer?
+    
     @IBOutlet weak var txtBillID: UITextField!
 //    @IBOutlet weak var txtBillDate: UITextField!
     @IBOutlet weak var txtBillAmount: UITextField!
@@ -58,6 +60,11 @@ class AddNewInternetViewController: UIViewController, UITextFieldDelegate {
                 alertController.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alertController, animated: true, completion: nil)
             }else{
+                
+                let tempObj = Internet(billId: txtBillID.text ?? "", billDate: textField_Date.text ?? "", totalBillAmount: Float(txtBillAmount.text ?? "")!, providerName: txtProviderName.text ?? "", internetGBUsed: Int(txtInternetUsage.text ?? "")!)
+                
+                customer?.addBill(bill: tempObj, billId: tempObj.billId)
+                
                 navigationController?.popViewController(animated: true)
             }
        }
